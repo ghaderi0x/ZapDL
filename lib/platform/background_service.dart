@@ -12,13 +12,15 @@ import 'package:flutter/services.dart';
 /// automatically when it returns (see AppServices).
 abstract class BackgroundService {
   /// Shows/updates the ongoing notification. Starts the service if needed.
-  Future<void> update({required String title, required String text});
+  /// [progress] is the overall percentage 0-100 of the active downloads, or
+  /// null when no total size is known.
+  Future<void> update({required String title, required String text, int? progress});
   Future<void> stop();
 }
 
 class NoopBackgroundService implements BackgroundService {
   @override
-  Future<void> update({required String title, required String text}) async {}
+  Future<void> update({required String title, required String text, int? progress}) async {}
   @override
   Future<void> stop() async {}
 }
@@ -28,10 +30,10 @@ class AndroidForegroundService implements BackgroundService {
   bool _running = false;
 
   @override
-  Future<void> update({required String title, required String text}) async {
+  Future<void> update({required String title, required String text, int? progress}) async {
     if (!Platform.isAndroid) return;
     try {
-      await _channel.invokeMethod<void>('update', {'title': title, 'text': text});
+      await _channel.invokeMethod<void>('update', {'title': title, 'text': text, 'progress': progress ?? -1});
       _running = true;
     } on PlatformException {
       // Android may refuse starting a service from the background; the
