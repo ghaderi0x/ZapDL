@@ -5,6 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:path/path.dart' as p;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:zapdl/engine/engine.dart';
+import 'package:zapdl/engine/models.dart';
 import 'package:zapdl/engine/store.dart';
 import 'package:zapdl/features/settings/settings_cubit.dart';
 import 'package:zapdl/platform/app_services.dart';
@@ -41,7 +42,7 @@ class FakeBackground implements BackgroundService {
   int stops = 0;
   String? lastText;
   @override
-  Future<void> update({required String title, required String text}) async {
+  Future<void> update({required String title, required String text, int? progress}) async {
     updates++;
     lastText = text;
   }
