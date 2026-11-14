@@ -14,6 +14,7 @@ class BackgroundChannel(private val context: Context) : MethodChannel.MethodCall
                 val intent = Intent(context, DownloadService::class.java)
                     .putExtra("title", call.argument<String>("title"))
                     .putExtra("text", call.argument<String>("text"))
+                    .putExtra("progress", call.argument<Int>("progress") ?: -1)
                 try {
                     if (Build.VERSION.SDK_INT >= 26) context.startForegroundService(intent)
                     else context.startService(intent)
