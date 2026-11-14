@@ -11,6 +11,9 @@ All notable changes are documented here. Format follows [Keep a Changelog](https
 - Link groups: add several links at once and download them one after another in order; optional "auto-detect next part" (part1 -> part2 ...).
 - Files deleted from disk are marked as deleted in the list.
 - Hover highlights on desktop.
+- One-tap dark/light button; snackbars are dark in dark mode.
+- Download status in the Windows tray (menu + tooltip) and a progress bar in the Android notification.
+- Single instance on desktop: opening ZapDL again shows the running window instead of starting another process.
 - System proxy support (Windows/macOS); YouTube lookups now use the same proxy as downloads.
 
 ### Fixed
