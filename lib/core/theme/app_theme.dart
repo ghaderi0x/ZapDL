@@ -43,7 +43,7 @@ abstract final class AppTheme {
       surfaceContainerHighest: z.surfaceRaised,
     );
 
-    const stadium = StadiumBorder();
+    final stadium = const StadiumBorder();
 
     return ThemeData(
       useMaterial3: true,
@@ -130,8 +130,8 @@ abstract final class AppTheme {
       // instead of covering it.
       snackBarTheme: SnackBarThemeData(
         behavior: SnackBarBehavior.floating,
-        backgroundColor: z.surfaceRaised,
-        contentTextStyle: TextStyle(color: z.text, fontSize: 14),
+        backgroundColor: isDark ? const Color(0xFF14161A) : z.surfaceRaised,
+        contentTextStyle: TextStyle(color: isDark ? Colors.white : z.text, fontSize: 14),
         actionTextColor: z.accent,
         showCloseIcon: false,
         shape: RoundedRectangleBorder(
