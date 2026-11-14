@@ -1,163 +1,183 @@
 <div align="center">
 
-<img src="assets/branding/banner.png" alt="ZapDL: Download at the Speed of Zap" width="720">
+<img src="assets/branding/banner.png" alt="ZapDL: Download at the Speed of Zap" width="760">
 
-**A free, open-source download manager for Android, Windows, Linux, macOS and iOS.**
+### Fast, free download manager for Windows, Linux, macOS, Android and iOS
 
-[![Release](https://img.shields.io/github/v/release/ghaderi0x/ZapDL?include_prereleases&label=release)](https://github.com/ghaderi0x/ZapDL/releases)
+[![Release](https://img.shields.io/github/v/release/ghaderi0x/ZapDL?include_prereleases&label=latest)](https://github.com/ghaderi0x/ZapDL/releases/latest)
 [![CI](https://github.com/ghaderi0x/ZapDL/actions/workflows/ci.yml/badge.svg)](https://github.com/ghaderi0x/ZapDL/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-![Platforms](https://img.shields.io/badge/platforms-Android%20%7C%20Windows%20%7C%20Linux%20%7C%20macOS%20%7C%20iOS-2563eb)
+![Languages](https://img.shields.io/badge/languages-6-2563eb)
 
-[English](README.md) · [فارسی](README.fa.md) · [Developer guide](docs/DEVELOPERS.md) · [Releases](https://github.com/ghaderi0x/ZapDL/releases)
+**[⬇ Download](#-download)** · **[Features](#-features)** · **[How to use](#-how-to-use)** · **[FAQ](#-faq)** · **[For developers](#-for-developers)** · [فارسی](README.fa.md)
+
+<br>
+
+<img src="docs/demo.gif" alt="ZapDL demo" width="760">
 
 </div>
 
-> **Status: v1.0.0.** The automated tests pass (121) and the Windows build has been run and used. Android, Linux, macOS and iOS builds have **not** been verified by the author yet, so expect rough edges there. [`docs/CHECKLIST.md`](docs/CHECKLIST.md) lists exactly what is and isn't verified.
-
 ---
 
-## What ZapDL does
+## ⬇ Download
+
+Get the file for your system from the **[latest release](https://github.com/ghaderi0x/ZapDL/releases/latest)**.
+
+| Your system | File to download | Install |
+|---|---|---|
+| 🪟 **Windows** | `ZapDL-…-windows-x64-setup.exe` (or `…-windows-x64.zip`, no install) | Run it. No admin rights needed. |
+| 🤖 **Android** | `ZapDL-…-android.apk` | Open the file and allow "install unknown apps" if asked. |
+| 🐧 **Linux** | `ZapDL-…-linux-x64.tar.gz` | `tar -xzf ZapDL-*.tar.gz -C ~/zapdl && ~/zapdl/zapdl` |
+| 🍎 **macOS** | `ZapDL-…-macos.dmg` | Drag to Applications. First launch: right-click → Open (not notarized yet). |
+| 📱 **iOS** | not published | Needs an Apple developer account; build from source. |
+
+Android users in Iran can also use **Myket** or **Cafe Bazaar** once ZapDL is listed there (store builds are updated by the store).
+
+> **Status:** version 1.0.0. The automated tests pass and the Windows version has been used for real. Android, Linux and macOS builds are new and less tested; if something breaks, please [open an issue](https://github.com/ghaderi0x/ZapDL/issues/new/choose).
+
+## ✨ Features
 
 | | |
 |---|---|
-| **Fast downloads** | Splits a file into parts and downloads them in parallel (when the server allows it), then joins them safely. |
-| **Pause and resume** | Stop any time, close the app, come back later. ZapDL checks the file hasn't changed on the server before continuing. |
-| **Links from web pages** | Paste a YouTube, Reddit, Telegram or ordinary web page link and choose the quality. |
-| **Link groups** | Add several links at once (for example `game.part1.zip`, `game.part2.zip`). They download one after another in order, and "auto-download next parts" finds part2, part3… by itself. |
-| **Schedule** | Start a download later, or only download between certain hours (for example 23:00 to 06:00). |
-| **Wi-Fi only** | Never use mobile data. Downloads wait for Wi-Fi and continue by themselves. |
-| **Proxy, cookies, headers** | For sites that need a proxy, a login cookie or a Referer. Passwords are kept in your system's secure storage. |
-| **Background downloads** | Android keeps going with a notification; desktop can live in the tray. |
-| **Share and drop** | Share a link from any Android app to ZapDL, or drag links / `.txt` / `.url` files onto the desktop window. |
-| **Updates from GitHub** | Tells you when a new version is out, downloads it, checks its fingerprint (SHA-256) and installs it. You can also update from a file. |
-| **6 languages** | English, فارسی, العربية, Español, 中文, Русский. Right-to-left layout is automatic for Persian and Arabic. |
-| **Themes** | Four themes (Forest, Sunset, Ocean, Glacier), each in Auto, Light or Dark, plus a custom accent color. |
+| ⚡ **Fast** | Splits files into parts and downloads them at the same time, when the server allows it. |
+| ⏯ **Pause and resume** | Stop any time, close the app, continue later. If the file changed on the server, ZapDL tells you instead of corrupting it. |
+| 📦 **Link groups** | Paste all parts of a game (`part1`, `part2`, …). They download one by one, in order. "Auto next part" finds `part2`, `part3` by itself. |
+| 🎬 **Videos from links** | YouTube, Reddit, Telegram and normal web pages: paste the page link and choose a quality. |
+| 🕒 **Schedule** | Start later, or only download between chosen hours (for example 23:00–06:00). |
+| 📶 **Wi-Fi only** | Never uses mobile data; continues by itself when Wi-Fi is back. |
+| 🌐 **Proxy, cookies, headers** | For filtered sites and sites that need a login cookie. Follows the Windows/macOS system proxy. |
+| 🔔 **Status everywhere** | Progress in the Android notification, speed and count in the Windows tray. |
+| 🗑 **Notices deleted files** | If you delete a finished file, the entry says "File deleted" and offers "Download again". |
+| 🔄 **Self-update** | Checks GitHub Releases, downloads, verifies the SHA-256 fingerprint and installs. |
+| 🎨 **4 themes × light/dark** | Forest, Sunset, Ocean, Glacier, plus a custom color and a one-tap dark/light button. |
+| 🌍 **6 languages** | English, فارسی, العربية, Español, 中文, Русский, with automatic right-to-left layout. |
+| 🔒 **Private** | No account, no ads, no analytics. |
 
-## Install
+## 🚀 How to use
 
-Download the file for your system from the [**Releases page**](https://github.com/ghaderi0x/ZapDL/releases/latest):
+1. **Add a link:** press **+** (or `Ctrl+N`), paste a link. ZapDL checks it and shows the name and size. On a computer you can also **drag links or a `.txt` file** onto the window; on Android use **Share → ZapDL** from any app.
+2. **Choose** the folder and, for videos, the quality. Press **Add**.
+3. **Watch** progress in the list. Tap an item for details; right-click (or the ⋮ menu) for pause, open, copy link, delete.
 
-| System | File | How to install |
-|---|---|---|
-| **Android** | `ZapDL-<version>-android.apk` | Open the file. If Android asks, allow "install unknown apps" for your browser or file manager. |
-| **Windows** | `ZapDL-<version>-windows-x64-setup.exe` (or the `.zip` for a portable copy) | Run the installer. No administrator rights needed. |
-| **Linux** | `ZapDL-<version>-linux-x64.tar.gz` | `tar -xzf ZapDL-*.tar.gz -C ~/zapdl && ~/zapdl/zapdl` |
-| **macOS** | `ZapDL-<version>-macos.dmg` | Open it and drag ZapDL to Applications. The app is not notarized yet, so right-click → Open the first time. |
-| **iOS** | not distributed yet | Needs an Apple developer account; build from source. |
+**Multi-part files:** in the add dialog press **Group of links**, paste one link per line in the right order, optionally turn on *Auto-download next parts*.
 
-> Every release has a `SHA256SUMS.txt`. To check a download on Linux: `sha256sum -c SHA256SUMS.txt --ignore-missing`.
+**YouTube is blocked where you live?** ZapDL can't unblock it by itself, but it works through your VPN/proxy. Leave *Settings → Network → Proxy* on **System** if your tool sets the system proxy, or choose **Manual** and enter its HTTP port (for example `127.0.0.1:10809`). SOCKS-only ports don't work. More in [docs/MEDIA_SOURCES.md](docs/MEDIA_SOURCES.md).
 
-Android users can also get the app from **Myket** or **Cafe Bazaar** once it is listed there. Those builds are updated by the store, so the in-app updater is switched off in them.
+## ❓ FAQ
 
-## How a download works
+<details><summary><b>I opened ZapDL again and now there are two in Task Manager.</b></summary>
+Fixed in 1.0.0: opening ZapDL again brings the running window to the front instead of starting a second copy.
+</details>
+
+<details><summary><b>"Waiting for an allowed connection"</b></summary>
+You are offline, or "Wi-Fi only" is on while you are on mobile data. Connect to Wi-Fi or switch it off in Settings → Network.
+</details>
+
+<details><summary><b>Android says the update can't be installed.</b></summary>
+Android only updates an app with a file signed by the same key. If your installed copy came from somewhere else (a self-built copy, for example), uninstall it and install the release APK.
+</details>
+
+<details><summary><b>Why no 1080p for YouTube?</b></summary>
+YouTube serves high resolutions as separate video and audio files that must be merged with ffmpeg, which ZapDL doesn't include. You get ready-made files (usually up to 720p) or audio only.
+</details>
+
+<details><summary><b>Does it support FTP, torrents or SOCKS?</b></summary>
+No. ZapDL does HTTP and HTTPS downloads, and HTTP proxies.
+</details>
+
+## 🔐 Privacy and fair use
+
+- Nothing is sent anywhere except to the sites you download from, GitHub (update check) and the page whose media link you paste.
+- Cookies and proxy passwords live in your system's secure storage, never in the download list, and are only sent to the site they were given for.
+- ZapDL doesn't bypass DRM, paywalls or logins. Respect each site's terms and copyright law.
+- Translations are machine-written and need native review; corrections are welcome.
+
+---
+
+# 🛠 For developers
+
+Everything below is for people who want to run, change or release ZapDL.
+
+## Stack
+
+| Layer | Choice |
+|---|---|
+| UI | Flutter 3.27+ / Dart 3.6, Material 3 with a custom `ThemeExtension` (`ZapColors`) |
+| State | `flutter_bloc` Cubits |
+| DI | `get_it` (wired in `lib/core/di.dart`) |
+| Download engine | **Pure Dart on `dart:io`** (no Flutter imports, testable without a device) |
+| Storage | atomic JSON file for downloads; `shared_preferences` for settings; system secure storage for secrets |
+| i18n | `gen-l10n` ARB files (6 languages), direction follows the app language |
+| Native | small Kotlin foreground service on Android; tray + window management on desktop |
+| Release | GitHub Actions builds, signs and publishes; the app updates itself from GitHub Releases |
+
+## Run it
+
+```bash
+git clone https://github.com/ghaderi0x/ZapDL.git && cd ZapDL
+dart tool/setup.dart        # flutter create + permissions + Kotlin service + icons + gen-l10n
+flutter analyze
+flutter test                # engine tests run against a local HTTP server
+flutter run -d windows      # or linux / macos / an Android device
+```
+
+Linux needs `libayatana-appindicator3-dev libsecret-1-dev libnotify-dev` (and the usual Flutter Linux packages). `dart tool/setup.dart` is safe to re-run; it re-applies the platform patches.
+
+## Project layout
+
+```
+lib/
+  engine/      download engine (no Flutter): runner, probe, store, gates, parts, proxy
+  features/    UI by feature: downloads, settings, stats, onboarding, shell
+  media/       link → media resolver (YouTube, Reddit, Telegram, Open Graph, yt-dlp)
+  platform/    notifications, tray, single instance, share intake, background service
+  update/      GitHub Releases updater (semver, asset selection, SHA-256, installer)
+  core/        DI, theme, formatting, app info (version, store flag)
+  l10n/        ARB files
+tool/          setup.dart, bump_version.dart, build_android.sh, Kotlin templates
+test/          engine, update, platform, widget, theme tests
+docs/          ARCHITECTURE, DEVELOPERS, RELEASE, GITHUB_GUIDE, MEDIA_SOURCES, CHECKLIST
+```
+
+## How it works
 
 ```mermaid
 flowchart TD
-    A["You paste a link"] --> B{"Web page or file?"}
-    B -- "YouTube / Reddit / Telegram / page" --> C["Find the media and let you pick a quality"]
-    B -- "Direct file" --> D["Ask the server: size, resume support, name"]
-    C --> D
-    D --> E{"Server supports resume?"}
-    E -- "Yes" --> F["Split into parts, download in parallel"]
-    E -- "No" --> G["Download in one piece"]
-    F --> H["Join parts and check the total size"]
-    G --> H
-    H --> I["Rename into place: done"]
-    F -. "network drops" .-> J["Wait, then continue from the same byte"]
-    J -.-> F
+    UI["features/* (pages, dialogs)"] --> Cubits["Cubits: Downloads, Settings, Update"]
+    Cubits --> Engine["DownloadEngine: queue, groups, gates, persistence"]
+    Cubits --> Media["MediaResolver"]
+    Cubits --> Update["UpdateService"]
+    Engine --> Runner["SegmentedRunner: one attempt"]
+    Runner --> Http["probe + http_support (dart:io, proxy)"]
+    Engine --> Store["JsonFileDownloadStore + SecretStore"]
+    Platform["platform/*: network policy, tray, notifications"] -. "gates / status" .-> Engine
 ```
 
-ZapDL only marks a download as finished after the file is complete and its size matches. A broken or partial download is never shown as done.
+**One download attempt** (`lib/engine/runner.dart`): probe with `Range: bytes=0-0` → plan N contiguous segments → each segment streams to its own `partN` file (the real file length on disk is the source of truth after a crash) → on resume re-probe and compare ETag / Last-Modified / size → verify every part → merge to `<name>.zapdl-part` → check total size → atomic rename.
 
-## When do downloads run?
+**Gates** (`EngineGate`): the engine only starts work when every gate is open: user not paused, network allowed (online and Wi-Fi-only respected), inside the schedule window. Platform code flips gates; the engine decides.
 
-```mermaid
-flowchart LR
-    Q["Queued download"] --> W{"Allowed right now?"}
-    W -- "Offline, or Wi-Fi only on mobile data" --> X["Waits for a good connection"]
-    W -- "Outside your allowed hours" --> Y["Waits for the time window"]
-    W -- "Scheduled for later" --> Z["Waits for its start time"]
-    W -- "Yes" --> R["Downloading"]
-    X --> W
-    Y --> W
-    Z --> W
-```
+**Groups and parts:** tasks carry `groupId`/`groupOrder`; a task waits while an earlier one in its group is queued, running or paused. `autoNext` plus `parts.dart` probes `part N+1` when `part N` finishes and adds it to the group.
 
-| Platform | While the app is closed to the background |
-|---|---|
-| Android | Keeps downloading; a notification shows progress. (Some phone makers kill background apps. Turn off battery optimization for ZapDL if that happens.) |
-| Windows / Linux / macOS | Keeps downloading while the app is open. With "Keep running in the tray" on, closing the window hides it instead of quitting. |
-| iOS | iOS freezes apps in the background, so downloads pause and **resume automatically** when you come back. |
+**Single instance:** `platform/single_instance.dart` holds a loopback port; a second launch asks the first to show its window and exits.
 
-## Updates
+**Updater naming contract** (the workflow and `asset_selector.dart` must agree): `ZapDL-<v>-android.apk`, `-windows-x64-setup.exe`, `-windows-x64.zip`, `-linux-x64.tar.gz`, `-macos.dmg`, `SHA256SUMS.txt`. The `-android-store.apk` is never offered as an update.
 
-```mermaid
-sequenceDiagram
-    participant App as ZapDL
-    participant GH as GitHub Releases
-    App->>GH: Any newer version? (at most once a day)
-    GH-->>App: Yes, 1.2.0 with release notes
-    App->>App: Notification and banner
-    App->>GH: Download the file for my system
-    App->>App: Check SHA-256 fingerprint
-    App->>App: Install (Android installer / Windows setup / ...)
-```
+More: [ARCHITECTURE](docs/ARCHITECTURE.md) · [DEVELOPERS](docs/DEVELOPERS.md) (engine internals, state diagram, how to add a language / site adapter / setting) · [MEDIA_SOURCES](docs/MEDIA_SOURCES.md).
 
-You can turn automatic checks off, skip a version, include beta versions, or install from a file you downloaded yourself (Settings → Updates).
-
-## Privacy
-
-- ZapDL has **no accounts, no ads and no analytics**. It does not send usage data anywhere.
-- It only contacts the sites you download from, GitHub (to check for updates), and the page you ask it to look at when you paste a media link.
-- Cookies and proxy passwords are stored in your system's secure storage (Keychain, Android Keystore, Windows DPAPI, libsecret) and are never written to the download list.
-- Credentials are only sent to the site you gave them for, not to another site after a redirect.
-
-## Good to know
-
-- **Use it for things you may download.** ZapDL does not bypass DRM, paywalls or logins. Follow each website's terms and copyright law.
-- **Media sites change often.** YouTube, Reddit and others can break the media features at any time; updating ZapDL fixes that. For YouTube you get ready-made video+audio files (often up to 720p) or audio only. Higher qualities need ffmpeg, which ZapDL does not include.
-- **Proxy:** HTTP proxies only; SOCKS is not supported. ZapDL follows the Windows/macOS system proxy. If YouTube is filtered where you live, you need a working proxy or VPN; see [docs/MEDIA_SOURCES.md](docs/MEDIA_SOURCES.md).
-- **Deleted files:** if you delete a finished file outside ZapDL, the entry is marked "File deleted" and offers "Download again".
-- **FTP/SFTP** is not supported.
-- Translations are machine-written and need review by native speakers. Corrections are very welcome.
-
-## FAQ
-
-<details><summary>Why does my download say "Waiting for an allowed connection"?</summary>
-Either you are offline, or "Wi-Fi only" is on and you are on mobile data. Connect to Wi-Fi or switch the option off in Settings → Network.
-</details>
-
-<details><summary>Android says the update can't be installed.</summary>
-Android only updates an app with a file signed by the same developer key. If you installed ZapDL from a different source (for example a self-built copy), uninstall it first, then install the release APK.
-</details>
-
-<details><summary>Why is there no 1080p for YouTube?</summary>
-YouTube serves high resolutions as separate video and audio files that must be joined with ffmpeg. ZapDL does not bundle ffmpeg, so it offers the ready-made files only.
-</details>
-
-<details><summary>Does it work with a VPN or proxy?</summary>
-A VPN works like any other connection. For a proxy, use Settings → Network → Proxy (HTTP proxies).
-</details>
-
-## Build from source
-
-You need [Flutter](https://docs.flutter.dev/get-started/install) 3.27 or newer.
+## Release
 
 ```bash
-git clone https://github.com/ghaderi0x/ZapDL.git
-cd ZapDL
-dart tool/setup.dart     # creates the platform folders, icons, permissions
-flutter test
-flutter run -d linux     # or windows / macos / an Android device
+dart tool/bump_version.dart 1.1.0     # pubspec + app_info + CHANGELOG
+git commit -am "Release 1.1.0" && git tag v1.1.0 && git push origin main --tags
 ```
 
-More in the [developer guide](docs/DEVELOPERS.md) and [release guide](docs/RELEASE.md).
+GitHub Actions then builds Android (signed), Windows (installer + zip), Linux, macOS, and publishes the Release with `SHA256SUMS.txt`. Android signing secrets and store notes: [docs/GITHUB_GUIDE.md](docs/GITHUB_GUIDE.md), [docs/RELEASE.md](docs/RELEASE.md). The Android build has two variants: the GitHub APK with the updater, and a store APK (`--dart-define=STORE_BUILD=true`) without it.
 
 ## Contributing
 
-Bug reports, translation fixes and pull requests are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) first. Security problems: see [SECURITY.md](SECURITY.md).
+Bug reports, translations and pull requests are welcome: see [CONTRIBUTING.md](CONTRIBUTING.md). Security issues: [SECURITY.md](SECURITY.md). What is verified and what isn't: [docs/CHECKLIST.md](docs/CHECKLIST.md).
 
 ## License
 
-[MIT](LICENSE). Bundled fonts (Vazirmatn, Inter, Noto Sans SC) are under the SIL Open Font License; see `assets/fonts/LICENSES.txt`.
+[MIT](LICENSE). Bundled fonts (Vazirmatn, Inter, Noto Sans SC) are under the SIL Open Font License, see `assets/fonts/LICENSES.txt`.
