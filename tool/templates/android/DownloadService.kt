@@ -25,7 +25,8 @@ class DownloadService : Service() {
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         val title = intent?.getStringExtra("title") ?: "ZapDL"
         val text = intent?.getStringExtra("text") ?: ""
-        val notification = buildNotification(title, text)
+        val progress = intent?.getIntExtra("progress", -1) ?: -1
+        val notification = buildNotification(title, text, progress)
         if (Build.VERSION.SDK_INT >= 29) {
             startForeground(NOTIFICATION_ID, notification, ServiceInfo.FOREGROUND_SERVICE_TYPE_DATA_SYNC)
         } else {
@@ -47,7 +48,7 @@ class DownloadService : Service() {
         super.onDestroy()
     }
 
-    private fun buildNotification(title: String, text: String): Notification {
+    private fun buildNotification(title: String, text: String, progress: Int): Notification {
         val nm = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         if (Build.VERSION.SDK_INT >= 26 && nm.getNotificationChannel(CHANNEL_ID) == null) {
             nm.createNotificationChannel(
@@ -61,6 +62,7 @@ class DownloadService : Service() {
         val tap = PendingIntent.getActivity(this, 0, launch, flags)
         val builder = if (Build.VERSION.SDK_INT >= 26) Notification.Builder(this, CHANNEL_ID)
         else @Suppress("DEPRECATION") Notification.Builder(this)
+        if (progress in 0..100) builder.setProgress(100, progress, false)
         return builder
             .setContentTitle(title)
             .setContentText(text)
