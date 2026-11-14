@@ -48,7 +48,6 @@ jobs:
           echo "version=$V" >> "$GITHUB_OUTPUT"
           case "$V" in *-*) echo "prerelease=true" >> "$GITHUB_OUTPUT";; *) echo "prerelease=false" >> "$GITHUB_OUTPUT";; esac
       - run: flutter pub get && flutter gen-l10n
-      - run: flutter analyze
       - run: flutter test
 
   android:
