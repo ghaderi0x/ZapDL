@@ -124,6 +124,7 @@ class _Header extends StatelessWidget {
             icon: const Icon(Icons.play_circle_outline_rounded),
             onPressed: cubit.resumeAll,
           ),
+          const ThemeToggleButton(),
         ]),
       );
     }
@@ -133,7 +134,12 @@ class _Header extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(l.navDownloads, style: Theme.of(context).textTheme.headlineMedium),
+          Row(children: [
+            Expanded(
+              child: Text(l.navDownloads, style: Theme.of(context).textTheme.headlineMedium),
+            ),
+            const ThemeToggleButton(),
+          ]),
           const SizedBox(height: 12),
           ZapCard(
             radius: ZapRadii.cardMobile,
