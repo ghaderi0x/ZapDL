@@ -1,0 +1,347 @@
+{
+  "@@locale": "ru",
+  "appName": "ZapDL",
+  "tagline": "Скачивайте со скоростью Zap.",
+  "navDownloads": "Загрузки",
+  "navStats": "Статистика",
+  "navSettings": "Настройки",
+  "statusAll": "Все",
+  "statusQueued": "В очереди",
+  "statusDownloading": "Загружается",
+  "statusPaused": "На паузе",
+  "statusCompleted": "Завершено",
+  "statusFailed": "Ошибка",
+  "statusCanceled": "Отменено",
+  "catAll": "Все загрузки",
+  "catVideos": "Видео",
+  "catAudio": "Аудио",
+  "catImages": "Изображения",
+  "catDocuments": "Документы",
+  "catArchives": "Архивы",
+  "catApplications": "Приложения",
+  "catOther": "Другие файлы",
+  "actionPause": "Пауза",
+  "actionResume": "Продолжить",
+  "actionCancel": "Отменить загрузку",
+  "actionRetry": "Повторить",
+  "actionOpenFile": "Открыть файл",
+  "actionOpenFolder": "Открыть папку с файлом",
+  "actionCopyUrl": "Копировать ссылку загрузки",
+  "actionRemove": "Удалить из истории",
+  "actionDeleteFile": "Удалить файл",
+  "actionPauseAll": "Приостановить все",
+  "actionResumeAll": "Продолжить все",
+  "actionAdd": "Добавить",
+  "actionAddAnyway": "Всё равно добавить",
+  "actionCheck": "Проверить ссылку",
+  "actionPaste": "Вставить",
+  "actionChange": "Изменить",
+  "actionDelete": "Удалить",
+  "actionClose": "Закрыть",
+  "actionApply": "Применить",
+  "addTitle": "Добавить загрузку",
+  "addUrlHint": "Вставьте ссылку для загрузки (http или https)",
+  "addFileName": "Имя файла",
+  "addSaveTo": "Сохранить в",
+  "addSize": "Размер",
+  "addUnknownSize": "Неизвестно",
+  "addResumeYes": "Поддерживает несколько соединений и докачку",
+  "addResumeNo": "Только одно соединение; при обрыве докачка невозможна",
+  "addDuplicate": "Эта ссылка уже есть в ваших загрузках.",
+  "searchHint": "Поиск по загрузкам",
+  "addOrPasteUrl": "Добавьте загрузку или вставьте ссылку...",
+  "emptyTitle": "Загрузок пока нет",
+  "emptyBody": "Вставьте ссылку, чтобы начать первую загрузку.",
+  "emptyFiltered": "Нет загрузок, подходящих под этот фильтр.",
+  "activeCount": "{count, plural, =1{1 активная} other{{count} активных}}",
+  "@activeCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "overallSpeed": "Скорость",
+  "timeLeft": "Осталось",
+  "colName": "Имя",
+  "colSize": "Размер",
+  "colStatus": "Статус",
+  "colDate": "Дата",
+  "confirmDeleteTitle": "Удалить файл?",
+  "confirmDeleteBody": "Файл «{name}» будет безвозвратно удалён с устройства.",
+  "@confirmDeleteBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "clipboardLinkFound": "Скопирована ссылка. Добавить в ZapDL?",
+  "linkCopied": "Ссылка скопирована",
+  "settingsAppearance": "Оформление",
+  "themeLight": "Светлая",
+  "themeDark": "Тёмная",
+  "themeSystem": "Системная",
+  "accentColor": "Акцентный цвет",
+  "customColor": "Свой цвет",
+  "pickColor": "Выберите цвет",
+  "language": "Язык",
+  "languageSystem": "Как в системе",
+  "settingsDownloads": "Загрузки",
+  "downloadFolder": "Папка загрузок",
+  "maxConcurrent": "Одновременные загрузки",
+  "connectionsPer": "Соединений на загрузку",
+  "speedLimitPer": "Ограничение скорости на загрузку",
+  "speedLimitNone": "Без ограничений",
+  "settingsAbout": "О приложении",
+  "aboutNote": "ZapDL бесплатен и имеет открытый исходный код. Загрузки идут, только пока приложение открыто.",
+  "statsTotalDownloaded": "Всего загружено",
+  "statsCompleted": "Завершено",
+  "statsFailed": "С ошибкой",
+  "statsLast7": "Последние 7 дней",
+  "onb1Title": "Все загрузки в одном месте",
+  "onb1Body": "Добавляйте ссылки, следите за прогрессом и управляйте файлами на удобной панели.",
+  "onb2Title": "Быстрее за счёт нескольких соединений",
+  "onb2Body": "Если сервер позволяет, ZapDL делит файл на части и скачивает их одновременно.",
+  "onb3Title": "Пауза и продолжение в любой момент",
+  "onb3Body": "Загрузка прервалась? Продолжите с того же места, даже после перезапуска.",
+  "onb4Title": "Автоматическая сортировка",
+  "onb4Body": "Видео, музыка, изображения, документы и другое раскладываются сами.",
+  "onbSkip": "Пропустить",
+  "onbNext": "Далее",
+  "onbStart": "Начать",
+  "errNetwork": "Проблема с сетью. Проверьте подключение.",
+  "errTimeout": "Сервер слишком долго не отвечает.",
+  "errHttp": "Сервер вернул ошибку (HTTP {status}).",
+  "@errHttp": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "errNotFound": "Файл не найден. Возможно, срок действия ссылки истёк.",
+  "errAccessDenied": "Доступ запрещён. Ссылка может требовать входа или устарела.",
+  "errRangeIgnored": "Сервер больше не поддерживает докачку. Повторите, чтобы начать заново.",
+  "errChanged": "Файл на сервере изменился. Повторите, чтобы начать заново.",
+  "errStorageFull": "Недостаточно места для хранения.",
+  "errPermission": "Нет доступа к этой папке.",
+  "errWrite": "Не удалось записать файл.",
+  "errIncomplete": "Загрузка оказалась неполной.",
+  "errInvalidUrl": "Это недействительная ссылка.",
+  "errUnsupported": "Этот тип ссылок (FTP/SFTP) пока не поддерживается.",
+  "errTls": "Не удалось установить защищённое соединение.",
+  "errUnknown": "Что-то пошло не так.",
+  "detailsTitle": "Сведения о загрузке",
+  "detailsSource": "Исходная ссылка",
+  "detailsDestination": "Папка назначения",
+  "detailsConnections": "Соединения",
+  "detailsResumable": "Поддерживает докачку",
+  "detailsYes": "Да",
+  "detailsNo": "Нет",
+  "detailsAdded": "Добавлено",
+  "addRecent": "Недавние ссылки",
+  "settingsAdvanced": "Дополнительно",
+  "cleanTempTitle": "Очистить временные файлы",
+  "cleanTempBody": "Удаляет остатки данных от загрузок, которых больше нет.",
+  "cleanTempDone": "Освобождено: {size}.",
+  "@cleanTempDone": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "clearLinkHistory": "Очистить историю ссылок",
+  "linkHistoryCleared": "История ссылок очищена",
+  "aboutVersion": "Версия",
+  "aboutLicense": "Лицензия",
+  "aboutThirdParty": "Лицензии третьих сторон",
+  "onb5Title": "Для всех ваших устройств",
+  "onb5Body": "ZapDL создан для Android, iOS, Windows, Linux и macOS.",
+  "aboutGithub": "Исходный код на GitHub",
+  "aboutReportIssue": "Сообщить о проблеме",
+  "actionSave": "Сохранить",
+  "addAdvanced": "Дополнительно",
+  "addCookies": "Cookie (необязательно)",
+  "addCookiesHint": "Вставьте содержимое cookies.txt или name=value; name2=value2",
+  "addFromPage": "Найдено на {site}",
+  "@addFromPage": {
+    "placeholders": {
+      "site": {
+        "type": "String"
+      }
+    }
+  },
+  "addPickQuality": "Качество / формат",
+  "addReferer": "Referer (необязательно)",
+  "addSchedule": "Запланировать…",
+  "addScheduleAt": "Начнётся {when}",
+  "@addScheduleAt": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "addScheduleNow": "Начать сразу",
+  "backgroundNoteAndroid": "Загрузки продолжаются, пока ZapDL работает в фоне; прогресс виден в уведомлении.",
+  "backgroundNoteDesktop": "Загрузки идут, пока приложение открыто. При включённом «Оставаться в трее» они продолжаются и после закрытия окна.",
+  "backgroundNoteIos": "iOS приостанавливает приложения в фоне. ZapDL ставит загрузки на паузу и возобновляет их при возвращении.",
+  "bulkAdded": "Добавлено загрузок: {count}",
+  "@bulkAdded": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "bulkFailed": "Не удалось добавить ссылок: {count}",
+  "@bulkFailed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dropHere": "Перетащите ссылки или файл .txt / .url, чтобы добавить",
+  "errInvalidHeader": "Недопустимый заголовок или cookie.",
+  "errProxy": "Недопустимые настройки прокси.",
+  "gateNetwork": "Ожидание разрешённого подключения (нет сети или включён режим «только Wi-Fi»).",
+  "gateSchedule": "Вне разрешённого времени загрузки. Они начнутся автоматически в нужный период.",
+  "gateSuspended": "Приостановлено, пока приложение в фоне. Продолжится при возвращении.",
+  "mediaErrBlocked": "Сайт отклонил или ограничил запрос. Повторите позже.",
+  "mediaErrLogin": "Этот контент не публичный или требует входа.",
+  "mediaErrNetwork": "Не удалось подключиться к сайту.",
+  "mediaErrNotFound": "По этой ссылке не найдено медиа для загрузки.",
+  "mediaErrParse": "Не удалось разобрать ответ сайта. Возможно, он изменился.",
+  "mediaErrUnsupported": "На этой странице нет медиа, которые ZapDL может загрузить.",
+  "mediaLegal": "Загружайте только то, что вам разрешено, и соблюдайте условия сайтов.",
+  "mediaNoteVideoOnly": "Только видео, без звука. Для звука скачайте также пункт Audio.",
+  "notifCompleted": "Загрузка завершена",
+  "notifFailed": "Загрузка не удалась",
+  "notifOngoing": "Активных: {count} · {speed}",
+  "@notifOngoing": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "speed": {
+        "type": "String"
+      }
+    }
+  },
+  "notifUpdateBody": "Доступна версия ZapDL {version}.",
+  "@notifUpdateBody": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "notifUpdateTitle": "Доступно обновление",
+  "proxyHost": "Хост",
+  "proxyHttpOnly": "Только HTTP-прокси (для HTTPS используется CONNECT). SOCKS не поддерживается. Пароль хранится в защищённом хранилище.",
+  "proxyManual": "Вручную (HTTP-прокси)",
+  "proxyNone": "Без прокси",
+  "proxyPass": "Пароль",
+  "proxyPort": "Порт",
+  "proxySystem": "Системный / переменные окружения",
+  "proxyUser": "Имя пользователя",
+  "scheduleFrom": "С",
+  "scheduleTo": "До",
+  "settingsBackground": "Фон и уведомления",
+  "settingsCloseToTray": "Оставаться в трее при закрытии",
+  "settingsCloseToTrayDesc": "Закрытие окна скрывает его; используйте значок в трее, чтобы показать или выйти.",
+  "settingsNetwork": "Сеть",
+  "settingsNotifications": "Уведомлять о завершении или ошибке загрузки",
+  "settingsProxy": "Прокси",
+  "settingsSaved": "Сохранено",
+  "settingsSchedule": "Расписание загрузок",
+  "settingsScheduleDesc": "Загружать только в эти часы каждый день (ночные интервалы тоже поддерживаются).",
+  "settingsScheduleEnable": "Ограничить загрузки временным окном",
+  "settingsUpdates": "Обновления",
+  "settingsWifiOnly": "Только Wi-Fi",
+  "settingsWifiOnlyDesc": "Не загружать через мобильный интернет. Загрузки ждут Wi-Fi или Ethernet.",
+  "statusScheduled": "Запланировано · {when}",
+  "@statusScheduled": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "trayQuit": "Выйти из ZapDL",
+  "trayShow": "Показать ZapDL",
+  "updateAllReleases": "Все релизы",
+  "updateAuto": "Автоматически проверять обновления",
+  "updateAutoDesc": "Не чаще раза в сутки, из релизов проекта на GitHub.",
+  "updateAvailable": "Доступна версия {version}",
+  "@updateAvailable": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "updateBeta": "Включать бета-версии",
+  "updateBetaDesc": "Предварительные версии могут быть менее стабильными.",
+  "updateCancel": "Приостановить загрузку",
+  "updateCheckNow": "Проверить",
+  "updateDownload": "Скачать обновление",
+  "updateErrChecksum": "Файл не совпал с контрольной суммой и был удалён. Повторите попытку.",
+  "updateErrDownload": "Не удалось скачать обновление.",
+  "updateErrGeneric": "При обновлении что-то пошло не так.",
+  "updateErrInstall": "Не удалось запустить установщик.",
+  "updateErrNetwork": "Не удалось связаться с GitHub. Проверьте подключение.",
+  "updateErrNoAsset": "В этом релизе нет файла для вашего устройства. Откройте страницу релиза.",
+  "updateErrRateLimit": "GitHub сейчас ограничивает запросы. Попробуйте позже.",
+  "updateErrUnsupported": "Этот тип файла нельзя установить на это устройство.",
+  "updateFollowSystem": "Следуйте подсказкам системного установщика.",
+  "updateFromFile": "Установить из файла…",
+  "updateInstall": "Установить",
+  "updateInstallManually": "Файл показан в файловом менеджере. Откройте его, чтобы завершить установку.",
+  "updateLastChecked": "Последняя проверка: {when}",
+  "@updateLastChecked": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "updateLocalNewer": "Этот файл новее установленной версии.",
+  "updateLocalOlder": "Этот файл СТАРШЕ установленной версии. Установка понизит версию ZapDL.",
+  "updateLocalSame": "Этот файл той же версии, что и установленная.",
+  "updateLocalUnknown": "Не удалось определить версию по имени файла. Устанавливайте только доверенные файлы.",
+  "updateNotVerified": "Контрольной суммы для проверки нет. Устанавливайте, только если доверяете источнику.",
+  "updateOpenReleasePage": "Открыть страницу релиза",
+  "updateRestarting": "Закрываем ZapDL для установки обновления…",
+  "updateSkip": "Пропустить эту версию",
+  "updateUpToDate": "У вас последняя версия.",
+  "updateVerified": "Контрольная сумма подтверждена (SHA-256).",
+  "updateView": "Открыть",
+  "updateWhatsNew": "Что нового",
+  "updateViaStore": "Эта сборка распространяется через магазин приложений, который и выпускает обновления. Обновляйте ZapDL через магазин.",
+  "themeChooseTitle": "Выберите тему",
+  "themeChooseSubtitle": "Четыре темы, каждая в светлом и тёмном режиме.",
+  "themeForest": "Лес",
+  "themeForestDesc": "Весна · спокойный и зелёный",
+  "themeSunset": "Закат",
+  "themeSunsetDesc": "Осень · тёплый и оранжевый",
+  "themeOcean": "Океан",
+  "themeOceanDesc": "Лето · прохладный и синий",
+  "themeGlacier": "Ледник",
+  "themeGlacierDesc": "Зима · светлый и ледяной",
+  "themeModeLabel": "Режим",
+  "themeAuto": "Авто",
+  "actionConfirm": "Подтвердить",
+  "addGroup": "Группа ссылок",
+  "addGroupHint": "Одна ссылка в строке, в порядке загрузки",
+  "addGroupOrderInfo": "Файлы скачиваются по очереди в этом порядке.",
+  "addAutoNext": "Автоматически скачивать следующие части",
+  "addAutoNextHelp": "Когда часть скачана, ZapDL ищет следующую (part1, part2, …) и добавляет её.",
+  "addAutoNextSuggest": "Похоже на одну из частей составного файла. Скачивать следующие части автоматически?",
+  "statusFileDeleted": "Файл удалён",
+  "fileDeletedHint": "Этот файл удалён с вашего устройства.",
+  "actionRedownload": "Скачать снова"
+}

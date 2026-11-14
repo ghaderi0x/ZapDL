@@ -1,0 +1,347 @@
+{
+  "@@locale": "es",
+  "appName": "ZapDL",
+  "tagline": "Descarga a la velocidad de Zap.",
+  "navDownloads": "Descargas",
+  "navStats": "Estadísticas",
+  "navSettings": "Ajustes",
+  "statusAll": "Todas",
+  "statusQueued": "En cola",
+  "statusDownloading": "Descargando",
+  "statusPaused": "En pausa",
+  "statusCompleted": "Completada",
+  "statusFailed": "Fallida",
+  "statusCanceled": "Cancelada",
+  "catAll": "Todas las descargas",
+  "catVideos": "Vídeos",
+  "catAudio": "Audio",
+  "catImages": "Imágenes",
+  "catDocuments": "Documentos",
+  "catArchives": "Archivos comprimidos",
+  "catApplications": "Aplicaciones",
+  "catOther": "Otros archivos",
+  "actionPause": "Pausar",
+  "actionResume": "Reanudar",
+  "actionCancel": "Cancelar descarga",
+  "actionRetry": "Reintentar",
+  "actionOpenFile": "Abrir archivo",
+  "actionOpenFolder": "Abrir carpeta contenedora",
+  "actionCopyUrl": "Copiar URL de descarga",
+  "actionRemove": "Quitar del historial",
+  "actionDeleteFile": "Eliminar archivo",
+  "actionPauseAll": "Pausar todo",
+  "actionResumeAll": "Reanudar todo",
+  "actionAdd": "Añadir",
+  "actionAddAnyway": "Añadir de todos modos",
+  "actionCheck": "Comprobar enlace",
+  "actionPaste": "Pegar",
+  "actionChange": "Cambiar",
+  "actionDelete": "Eliminar",
+  "actionClose": "Cerrar",
+  "actionApply": "Aplicar",
+  "addTitle": "Añadir descarga",
+  "addUrlHint": "Pega un enlace de descarga (http o https)",
+  "addFileName": "Nombre del archivo",
+  "addSaveTo": "Guardar en",
+  "addSize": "Tamaño",
+  "addUnknownSize": "Desconocido",
+  "addResumeYes": "Admite varias conexiones y reanudación",
+  "addResumeNo": "Solo una conexión; no se puede reanudar si se interrumpe",
+  "addDuplicate": "Este enlace ya está en tus descargas.",
+  "searchHint": "Buscar descargas",
+  "addOrPasteUrl": "Añade una descarga o pega una URL...",
+  "emptyTitle": "Aún no hay descargas",
+  "emptyBody": "Pega un enlace para empezar tu primera descarga.",
+  "emptyFiltered": "Ninguna descarga coincide con este filtro.",
+  "activeCount": "{count, plural, =1{1 activa} other{{count} activas}}",
+  "@activeCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "overallSpeed": "Velocidad",
+  "timeLeft": "Tiempo restante",
+  "colName": "Nombre",
+  "colSize": "Tamaño",
+  "colStatus": "Estado",
+  "colDate": "Fecha",
+  "confirmDeleteTitle": "¿Eliminar archivo?",
+  "confirmDeleteBody": "\"{name}\" se eliminará de forma permanente de tu dispositivo.",
+  "@confirmDeleteBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "clipboardLinkFound": "Se copió un enlace. ¿Añadirlo a ZapDL?",
+  "linkCopied": "Enlace copiado",
+  "settingsAppearance": "Apariencia",
+  "themeLight": "Claro",
+  "themeDark": "Oscuro",
+  "themeSystem": "Sistema",
+  "accentColor": "Color de acento",
+  "customColor": "Color personalizado",
+  "pickColor": "Elige un color",
+  "language": "Idioma",
+  "languageSystem": "Predeterminado del sistema",
+  "settingsDownloads": "Descargas",
+  "downloadFolder": "Carpeta de descargas",
+  "maxConcurrent": "Descargas simultáneas",
+  "connectionsPer": "Conexiones por descarga",
+  "speedLimitPer": "Límite de velocidad por descarga",
+  "speedLimitNone": "Sin límite",
+  "settingsAbout": "Acerca de",
+  "aboutNote": "ZapDL es gratuito y de código abierto. Las descargas solo se ejecutan mientras la app está abierta.",
+  "statsTotalDownloaded": "Total descargado",
+  "statsCompleted": "Completadas",
+  "statsFailed": "Fallidas",
+  "statsLast7": "Últimos 7 días",
+  "onb1Title": "Todas tus descargas en un lugar",
+  "onb1Body": "Añade enlaces, sigue el progreso y gestiona cada archivo desde un panel claro.",
+  "onb2Title": "Más rápido con varias conexiones",
+  "onb2Body": "Si el servidor lo permite, ZapDL divide el archivo en partes y las descarga a la vez.",
+  "onb3Title": "Pausa y reanuda cuando quieras",
+  "onb3Body": "¿Se interrumpió? Continúa donde lo dejaste, incluso tras reiniciar la app.",
+  "onb4Title": "Organizado automáticamente",
+  "onb4Body": "Vídeos, música, imágenes, documentos y más se ordenan solos.",
+  "onbSkip": "Omitir",
+  "onbNext": "Siguiente",
+  "onbStart": "Empezar",
+  "errNetwork": "Problema de red. Revisa tu conexión.",
+  "errTimeout": "El servidor tardó demasiado en responder.",
+  "errHttp": "El servidor devolvió un error (HTTP {status}).",
+  "@errHttp": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "errNotFound": "Archivo no encontrado. El enlace puede haber caducado.",
+  "errAccessDenied": "Acceso denegado. El enlace puede requerir inicio de sesión o haber caducado.",
+  "errRangeIgnored": "El servidor ya no admite la reanudación. Reintenta para empezar de nuevo.",
+  "errChanged": "El archivo remoto cambió. Reintenta para empezar de nuevo.",
+  "errStorageFull": "No hay espacio de almacenamiento suficiente.",
+  "errPermission": "Permiso denegado para esta carpeta.",
+  "errWrite": "No se pudo escribir el archivo.",
+  "errIncomplete": "La descarga quedó incompleta.",
+  "errInvalidUrl": "Este enlace no es válido.",
+  "errUnsupported": "Este tipo de enlace (FTP/SFTP) aún no es compatible.",
+  "errTls": "Falló la conexión segura.",
+  "errUnknown": "Algo salió mal.",
+  "detailsTitle": "Detalles de la descarga",
+  "detailsSource": "URL de origen",
+  "detailsDestination": "Carpeta de destino",
+  "detailsConnections": "Conexiones",
+  "detailsResumable": "Reanudable",
+  "detailsYes": "Sí",
+  "detailsNo": "No",
+  "detailsAdded": "Añadida",
+  "addRecent": "Enlaces recientes",
+  "settingsAdvanced": "Avanzado",
+  "cleanTempTitle": "Limpiar archivos temporales",
+  "cleanTempBody": "Elimina los datos parciales sobrantes de descargas que ya no existen.",
+  "cleanTempDone": "Se liberaron {size}.",
+  "@cleanTempDone": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "clearLinkHistory": "Borrar historial de enlaces",
+  "linkHistoryCleared": "Historial de enlaces borrado",
+  "aboutVersion": "Versión",
+  "aboutLicense": "Licencia",
+  "aboutThirdParty": "Licencias de terceros",
+  "onb5Title": "Para todos tus dispositivos",
+  "onb5Body": "ZapDL está pensado para Android, iOS, Windows, Linux y macOS.",
+  "aboutGithub": "Código fuente en GitHub",
+  "aboutReportIssue": "Informar de un problema",
+  "actionSave": "Guardar",
+  "addAdvanced": "Opciones avanzadas",
+  "addCookies": "Cookies (opcional)",
+  "addCookiesHint": "Pega el contenido de cookies.txt o name=value; name2=value2",
+  "addFromPage": "Encontrado en {site}",
+  "@addFromPage": {
+    "placeholders": {
+      "site": {
+        "type": "String"
+      }
+    }
+  },
+  "addPickQuality": "Calidad / formato",
+  "addReferer": "Referer (opcional)",
+  "addSchedule": "Programar…",
+  "addScheduleAt": "Empieza {when}",
+  "@addScheduleAt": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "addScheduleNow": "Empezar ahora",
+  "backgroundNoteAndroid": "Las descargas continúan con ZapDL en segundo plano; una notificación muestra el progreso.",
+  "backgroundNoteDesktop": "Las descargas se ejecutan con la app abierta. Con «cerrar a la bandeja» activado, también continúan al cerrar la ventana.",
+  "backgroundNoteIos": "iOS suspende las apps en segundo plano. ZapDL pausa las descargas y las reanuda al volver.",
+  "bulkAdded": "{count} descargas añadidas",
+  "@bulkAdded": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "bulkFailed": "No se pudieron añadir {count} enlaces",
+  "@bulkFailed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dropHere": "Suelta enlaces o un archivo .txt / .url para añadirlos",
+  "errInvalidHeader": "Un encabezado o una cookie no es válido.",
+  "errProxy": "La configuración del proxy no es válida.",
+  "gateNetwork": "Esperando una conexión permitida (sin conexión o «solo Wi-Fi» activado).",
+  "gateSchedule": "Fuera del horario permitido. Las descargas empiezan solas dentro del intervalo.",
+  "gateSuspended": "En pausa mientras la app está en segundo plano. Se reanudan al volver.",
+  "mediaErrBlocked": "El sitio rechazó o limitó la solicitud. Inténtalo más tarde.",
+  "mediaErrLogin": "Este contenido no es público o requiere iniciar sesión.",
+  "mediaErrNetwork": "No se pudo acceder al sitio.",
+  "mediaErrNotFound": "No se encontró contenido descargable en este enlace.",
+  "mediaErrParse": "No se pudo interpretar la respuesta del sitio. Puede haber cambiado.",
+  "mediaErrUnsupported": "Esta página no tiene contenido que ZapDL pueda descargar.",
+  "mediaLegal": "Descarga solo contenido que tengas derecho a descargar y respeta las condiciones de cada sitio.",
+  "mediaNoteVideoOnly": "Solo vídeo, sin sonido. Descarga también la opción de audio si quieres el sonido.",
+  "notifCompleted": "Descarga completada",
+  "notifFailed": "Descarga fallida",
+  "notifOngoing": "{count} activas · {speed}",
+  "@notifOngoing": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "speed": {
+        "type": "String"
+      }
+    }
+  },
+  "notifUpdateBody": "ZapDL {version} está disponible.",
+  "@notifUpdateBody": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "notifUpdateTitle": "Actualización disponible",
+  "proxyHost": "Servidor",
+  "proxyHttpOnly": "Solo proxies HTTP (los sitios HTTPS usan CONNECT). SOCKS no es compatible. La contraseña se guarda en almacenamiento seguro.",
+  "proxyManual": "Manual (proxy HTTP)",
+  "proxyNone": "Sin proxy",
+  "proxyPass": "Contraseña",
+  "proxyPort": "Puerto",
+  "proxySystem": "Sistema / entorno",
+  "proxyUser": "Usuario",
+  "scheduleFrom": "Desde",
+  "scheduleTo": "Hasta",
+  "settingsBackground": "Segundo plano y notificaciones",
+  "settingsCloseToTray": "Seguir en la bandeja al cerrar",
+  "settingsCloseToTrayDesc": "Cerrar la ventana la oculta; usa el icono de la bandeja para mostrarla o salir.",
+  "settingsNetwork": "Red",
+  "settingsNotifications": "Avisar al terminar o fallar una descarga",
+  "settingsProxy": "Proxy",
+  "settingsSaved": "Guardado",
+  "settingsSchedule": "Horario de descargas",
+  "settingsScheduleDesc": "Descargar solo entre estas horas cada día (también sirven los intervalos nocturnos).",
+  "settingsScheduleEnable": "Limitar descargas a un intervalo",
+  "settingsUpdates": "Actualizaciones",
+  "settingsWifiOnly": "Solo Wi-Fi",
+  "settingsWifiOnlyDesc": "No descargar con datos móviles. Las descargas esperan a Wi-Fi o Ethernet.",
+  "statusScheduled": "Programada · {when}",
+  "@statusScheduled": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "trayQuit": "Salir de ZapDL",
+  "trayShow": "Mostrar ZapDL",
+  "updateAllReleases": "Todas las versiones",
+  "updateAuto": "Buscar actualizaciones automáticamente",
+  "updateAutoDesc": "Como máximo una vez al día, desde las versiones de GitHub del proyecto.",
+  "updateAvailable": "La versión {version} está disponible",
+  "@updateAvailable": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "updateBeta": "Incluir versiones beta",
+  "updateBetaDesc": "Las versiones preliminares pueden ser menos estables.",
+  "updateCancel": "Pausar descarga",
+  "updateCheckNow": "Buscar ahora",
+  "updateDownload": "Descargar actualización",
+  "updateErrChecksum": "El archivo descargado no coincidía con su suma de verificación y se eliminó. Inténtalo de nuevo.",
+  "updateErrDownload": "No se pudo descargar la actualización.",
+  "updateErrGeneric": "Algo salió mal con la actualización.",
+  "updateErrInstall": "No se pudo iniciar el instalador.",
+  "updateErrNetwork": "No se pudo acceder a GitHub. Revisa tu conexión.",
+  "updateErrNoAsset": "Esta versión no tiene archivo para tu dispositivo. Abre la página de la versión.",
+  "updateErrRateLimit": "GitHub está limitando las solicitudes ahora. Inténtalo más tarde.",
+  "updateErrUnsupported": "Este tipo de archivo no se puede instalar en este dispositivo.",
+  "updateFollowSystem": "Sigue el instalador del sistema para terminar.",
+  "updateFromFile": "Instalar desde archivo…",
+  "updateInstall": "Instalar",
+  "updateInstallManually": "El archivo se mostró en tu gestor de archivos. Ábrelo para terminar de instalar.",
+  "updateLastChecked": "Última comprobación: {when}",
+  "@updateLastChecked": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "updateLocalNewer": "Este archivo es una versión más reciente que la instalada.",
+  "updateLocalOlder": "Este archivo es MÁS ANTIGUO que la versión instalada. Instalarlo degradaría ZapDL.",
+  "updateLocalSame": "Este archivo es la misma versión que la instalada.",
+  "updateLocalUnknown": "No se pudo leer la versión del nombre. Instala solo archivos de confianza.",
+  "updateNotVerified": "No había suma de verificación para comprobar este archivo. Instálalo solo si confías en la fuente.",
+  "updateOpenReleasePage": "Abrir página de la versión",
+  "updateRestarting": "Cerrando ZapDL para instalar la actualización…",
+  "updateSkip": "Omitir esta versión",
+  "updateUpToDate": "Tienes la última versión.",
+  "updateVerified": "Suma de verificación comprobada (SHA-256).",
+  "updateView": "Ver",
+  "updateWhatsNew": "Novedades",
+  "updateViaStore": "Esta versión se distribuye a través de una tienda de aplicaciones, que entrega las actualizaciones. Actualiza ZapDL desde la tienda.",
+  "themeChooseTitle": "Elige tu tema",
+  "themeChooseSubtitle": "Cuatro temas, cada uno en claro y oscuro.",
+  "themeForest": "Bosque",
+  "themeForestDesc": "Primavera · calma y verde",
+  "themeSunset": "Atardecer",
+  "themeSunsetDesc": "Otoño · cálido y naranja",
+  "themeOcean": "Océano",
+  "themeOceanDesc": "Verano · fresco y azul",
+  "themeGlacier": "Glaciar",
+  "themeGlacierDesc": "Invierno · luminoso y helado",
+  "themeModeLabel": "Modo",
+  "themeAuto": "Auto",
+  "actionConfirm": "Confirmar",
+  "addGroup": "Grupo de enlaces",
+  "addGroupHint": "Un enlace por línea, en orden de descarga",
+  "addGroupOrderInfo": "Los archivos se descargan uno tras otro, en este orden.",
+  "addAutoNext": "Descargar partes siguientes automáticamente",
+  "addAutoNextHelp": "Al terminar una parte, ZapDL busca la siguiente (part1, part2, …) y la añade.",
+  "addAutoNextSuggest": "Parece una parte de un archivo en varias partes. ¿Descargar las siguientes automáticamente?",
+  "statusFileDeleted": "Archivo eliminado",
+  "fileDeletedHint": "Este archivo se eliminó de tu dispositivo.",
+  "actionRedownload": "Descargar de nuevo"
+}

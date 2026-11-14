@@ -1,0 +1,347 @@
+{
+  "@@locale": "fa",
+  "appName": "ZapDL",
+  "tagline": "با سرعت زپ دانلود کنید.",
+  "navDownloads": "دانلودها",
+  "navStats": "آمار",
+  "navSettings": "تنظیمات",
+  "statusAll": "همه",
+  "statusQueued": "در صف",
+  "statusDownloading": "در حال دانلود",
+  "statusPaused": "متوقف‌شده",
+  "statusCompleted": "کامل‌شده",
+  "statusFailed": "ناموفق",
+  "statusCanceled": "لغو‌شده",
+  "catAll": "همه دانلودها",
+  "catVideos": "ویدیوها",
+  "catAudio": "صوت",
+  "catImages": "تصاویر",
+  "catDocuments": "اسناد",
+  "catArchives": "فایل‌های فشرده",
+  "catApplications": "برنامه‌ها",
+  "catOther": "سایر فایل‌ها",
+  "actionPause": "توقف",
+  "actionResume": "ادامه",
+  "actionCancel": "لغو دانلود",
+  "actionRetry": "تلاش دوباره",
+  "actionOpenFile": "باز کردن فایل",
+  "actionOpenFolder": "باز کردن پوشه فایل",
+  "actionCopyUrl": "کپی نشانی دانلود",
+  "actionRemove": "حذف از تاریخچه",
+  "actionDeleteFile": "حذف فایل",
+  "actionPauseAll": "توقف همه",
+  "actionResumeAll": "ادامه همه",
+  "actionAdd": "افزودن",
+  "actionAddAnyway": "با این حال افزوده شود",
+  "actionCheck": "بررسی پیوند",
+  "actionPaste": "چسباندن",
+  "actionChange": "تغییر",
+  "actionDelete": "حذف",
+  "actionClose": "بستن",
+  "actionApply": "اعمال",
+  "addTitle": "افزودن دانلود",
+  "addUrlHint": "پیوند دانلود را بچسبانید (http یا https)",
+  "addFileName": "نام فایل",
+  "addSaveTo": "ذخیره در",
+  "addSize": "اندازه",
+  "addUnknownSize": "نامشخص",
+  "addResumeYes": "از چند اتصال و ادامه دانلود پشتیبانی می‌شود",
+  "addResumeNo": "فقط یک اتصال؛ در صورت قطع شدن قابل ادامه نیست",
+  "addDuplicate": "این پیوند قبلاً در دانلودهای شما وجود دارد.",
+  "searchHint": "جستجو در دانلودها",
+  "addOrPasteUrl": "افزودن دانلود یا چسباندن نشانی...",
+  "emptyTitle": "هنوز دانلودی نیست",
+  "emptyBody": "برای شروع نخستین دانلود، یک پیوند بچسبانید.",
+  "emptyFiltered": "دانلودی با این فیلتر پیدا نشد.",
+  "activeCount": "{count, plural, =1{۱ فعال} other{{count} فعال}}",
+  "@activeCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "overallSpeed": "سرعت",
+  "timeLeft": "زمان باقی‌مانده",
+  "colName": "نام",
+  "colSize": "اندازه",
+  "colStatus": "وضعیت",
+  "colDate": "تاریخ",
+  "confirmDeleteTitle": "فایل حذف شود؟",
+  "confirmDeleteBody": "«{name}» برای همیشه از دستگاه شما حذف می‌شود.",
+  "@confirmDeleteBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "clipboardLinkFound": "پیوندی کپی شده است. به ZapDL افزوده شود؟",
+  "linkCopied": "پیوند کپی شد",
+  "settingsAppearance": "ظاهر",
+  "themeLight": "روشن",
+  "themeDark": "تیره",
+  "themeSystem": "سیستم",
+  "accentColor": "رنگ تأکیدی",
+  "customColor": "رنگ دلخواه",
+  "pickColor": "یک رنگ انتخاب کنید",
+  "language": "زبان",
+  "languageSystem": "پیش‌فرض سیستم",
+  "settingsDownloads": "دانلودها",
+  "downloadFolder": "پوشه دانلود",
+  "maxConcurrent": "دانلود هم‌زمان",
+  "connectionsPer": "تعداد اتصال برای هر دانلود",
+  "speedLimitPer": "محدودیت سرعت برای هر دانلود",
+  "speedLimitNone": "نامحدود",
+  "settingsAbout": "درباره",
+  "aboutNote": "ZapDL رایگان و متن‌باز است. دانلودها فقط تا زمانی که برنامه باز است ادامه می‌یابند.",
+  "statsTotalDownloaded": "مجموع دانلود",
+  "statsCompleted": "کامل‌شده",
+  "statsFailed": "ناموفق",
+  "statsLast7": "۷ روز گذشته",
+  "onb1Title": "همه دانلودها در یک جا",
+  "onb1Body": "پیوندها را اضافه کنید، پیشرفت را ببینید و همه فایل‌ها را از یک داشبورد مدیریت کنید.",
+  "onb2Title": "سریع‌تر با چند اتصال",
+  "onb2Body": "اگر سرور اجازه دهد، ZapDL فایل را به چند بخش تقسیم می‌کند و هم‌زمان دانلود می‌کند.",
+  "onb3Title": "هر زمان توقف و ادامه",
+  "onb3Body": "دانلود قطع شد؟ از همان‌جا ادامه دهید، حتی پس از راه‌اندازی دوباره برنامه.",
+  "onb4Title": "مرتب‌سازی خودکار",
+  "onb4Body": "ویدیو، موسیقی، تصویر، سند و موارد دیگر به‌طور خودکار دسته‌بندی می‌شوند.",
+  "onbSkip": "رد کردن",
+  "onbNext": "بعدی",
+  "onbStart": "شروع",
+  "errNetwork": "مشکل شبکه. اتصال خود را بررسی کنید.",
+  "errTimeout": "پاسخ سرور بیش از حد طول کشید.",
+  "errHttp": "سرور خطا برگرداند (HTTP {status}).",
+  "@errHttp": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "errNotFound": "فایل پیدا نشد. ممکن است پیوند منقضی شده باشد.",
+  "errAccessDenied": "دسترسی ممنوع است. ممکن است پیوند نیازمند ورود باشد یا منقضی شده باشد.",
+  "errRangeIgnored": "سرور دیگر از ادامه دانلود پشتیبانی نمی‌کند. برای شروع دوباره، تلاش مجدد را بزنید.",
+  "errChanged": "فایل روی سرور تغییر کرده است. برای شروع دوباره، تلاش مجدد را بزنید.",
+  "errStorageFull": "فضای ذخیره‌سازی کافی نیست.",
+  "errPermission": "اجازه دسترسی به این پوشه وجود ندارد.",
+  "errWrite": "نوشتن فایل ممکن نشد.",
+  "errIncomplete": "دانلود ناقص بود.",
+  "errInvalidUrl": "این پیوند معتبر نیست.",
+  "errUnsupported": "این نوع پیوند (FTP/SFTP) هنوز پشتیبانی نمی‌شود.",
+  "errTls": "اتصال امن برقرار نشد.",
+  "errUnknown": "مشکلی پیش آمد.",
+  "detailsTitle": "جزئیات دانلود",
+  "detailsSource": "نشانی منبع",
+  "detailsDestination": "پوشه مقصد",
+  "detailsConnections": "اتصال‌ها",
+  "detailsResumable": "قابل ادامه",
+  "detailsYes": "بله",
+  "detailsNo": "خیر",
+  "detailsAdded": "تاریخ افزودن",
+  "addRecent": "پیوندهای اخیر",
+  "settingsAdvanced": "پیشرفته",
+  "cleanTempTitle": "پاک‌سازی فایل‌های موقت",
+  "cleanTempBody": "داده‌های ناقص باقی‌مانده از دانلودهایی که دیگر وجود ندارند حذف می‌شود.",
+  "cleanTempDone": "{size} آزاد شد.",
+  "@cleanTempDone": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "clearLinkHistory": "پاک کردن تاریخچه پیوندها",
+  "linkHistoryCleared": "تاریخچه پیوندها پاک شد",
+  "aboutVersion": "نسخه",
+  "aboutLicense": "پروانه",
+  "aboutThirdParty": "پروانه‌های شخص ثالث",
+  "onb5Title": "برای همه دستگاه‌های شما",
+  "onb5Body": "ZapDL برای اندروید، iOS، ویندوز، لینوکس و مک‌او‌اس ساخته شده است.",
+  "aboutGithub": "کد منبع در گیت‌هاب",
+  "aboutReportIssue": "گزارش مشکل",
+  "actionSave": "ذخیره",
+  "addAdvanced": "گزینه‌های پیشرفته",
+  "addCookies": "کوکی‌ها (اختیاری)",
+  "addCookiesHint": "محتوای cookies.txt یا name=value؛ name2=value2 را بچسبانید",
+  "addFromPage": "یافت‌شده در {site}",
+  "@addFromPage": {
+    "placeholders": {
+      "site": {
+        "type": "String"
+      }
+    }
+  },
+  "addPickQuality": "کیفیت / قالب",
+  "addReferer": "ارجاع‌دهنده (Referer) — اختیاری",
+  "addSchedule": "زمان‌بندی…",
+  "addScheduleAt": "شروع در {when}",
+  "@addScheduleAt": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "addScheduleNow": "شروع فوری",
+  "backgroundNoteAndroid": "تا زمانی که ZapDL در پس‌زمینه است، دانلودها ادامه می‌یابند؛ یک اعلان پیشرفت را نشان می‌دهد.",
+  "backgroundNoteDesktop": "تا وقتی برنامه باز است دانلودها اجرا می‌شوند. با فعال بودن «بستن به سینی سیستم»، پس از بستن پنجره هم ادامه می‌یابند.",
+  "backgroundNoteIos": "iOS برنامه‌ها را در پس‌زمینه متوقف می‌کند. ZapDL دانلودها را متوقف می‌کند و با بازگشت شما ادامه می‌دهد.",
+  "bulkAdded": "{count} دانلود اضافه شد",
+  "@bulkAdded": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "bulkFailed": "افزودن {count} پیوند ممکن نبود",
+  "@bulkFailed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dropHere": "پیوندها یا فایل .txt / .url را اینجا رها کنید",
+  "errInvalidHeader": "یکی از هدرها یا کوکی‌ها معتبر نیست.",
+  "errProxy": "تنظیمات پروکسی معتبر نیست.",
+  "gateNetwork": "در انتظار اتصال مجاز (آفلاین یا حالت «فقط وای‌فای» فعال است).",
+  "gateSchedule": "خارج از ساعت مجاز دانلود. دانلودها در بازهٔ مجاز خودکار شروع می‌شوند.",
+  "gateSuspended": "تا زمانی که برنامه در پس‌زمینه است متوقف است و با بازگشت ادامه می‌یابد.",
+  "mediaErrBlocked": "سایت درخواست را رد یا محدود کرد. بعداً دوباره تلاش کنید.",
+  "mediaErrLogin": "این محتوا عمومی نیست یا نیاز به ورود دارد.",
+  "mediaErrNetwork": "اتصال به سایت برقرار نشد.",
+  "mediaErrNotFound": "در این پیوند رسانهٔ قابل دانلودی پیدا نشد.",
+  "mediaErrParse": "پاسخ سایت قابل درک نبود. ممکن است ساختار آن تغییر کرده باشد.",
+  "mediaErrUnsupported": "این صفحه رسانه‌ای که ZapDL بتواند دانلود کند ندارد.",
+  "mediaLegal": "فقط محتوایی را دانلود کنید که حق دانلود آن را دارید و شرایط استفادهٔ هر سایت را رعایت کنید.",
+  "mediaNoteVideoOnly": "فقط تصویر، بدون صدا. برای صدا، گزینهٔ «Audio» را هم دانلود کنید.",
+  "notifCompleted": "دانلود کامل شد",
+  "notifFailed": "دانلود ناموفق بود",
+  "notifOngoing": "{count} فعال · {speed}",
+  "@notifOngoing": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "speed": {
+        "type": "String"
+      }
+    }
+  },
+  "notifUpdateBody": "نسخهٔ {version} از ZapDL در دسترس است.",
+  "@notifUpdateBody": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "notifUpdateTitle": "به‌روزرسانی موجود است",
+  "proxyHost": "میزبان",
+  "proxyHttpOnly": "فقط پروکسی HTTP (سایت‌های HTTPS از CONNECT استفاده می‌کنند). SOCKS پشتیبانی نمی‌شود. گذرواژه در حافظهٔ امن ذخیره می‌شود.",
+  "proxyManual": "دستی (پروکسی HTTP)",
+  "proxyNone": "بدون پروکسی",
+  "proxyPass": "گذرواژه",
+  "proxyPort": "پورت",
+  "proxySystem": "سیستم / متغیرهای محیطی",
+  "proxyUser": "نام کاربری",
+  "scheduleFrom": "از",
+  "scheduleTo": "تا",
+  "settingsBackground": "پس‌زمینه و اعلان‌ها",
+  "settingsCloseToTray": "هنگام بستن، در سینی سیستم فعال بماند",
+  "settingsCloseToTrayDesc": "بستن پنجره آن را پنهان می‌کند؛ از آیکون سینی برای نمایش یا خروج استفاده کنید.",
+  "settingsNetwork": "شبکه",
+  "settingsNotifications": "اعلان هنگام پایان یا شکست دانلود",
+  "settingsProxy": "پروکسی",
+  "settingsSaved": "ذخیره شد",
+  "settingsSchedule": "زمان‌بندی دانلود",
+  "settingsScheduleDesc": "هر روز فقط در این بازهٔ ساعتی دانلود شود (بازهٔ شبانه هم پشتیبانی می‌شود).",
+  "settingsScheduleEnable": "محدود کردن دانلود به یک بازهٔ زمانی",
+  "settingsUpdates": "به‌روزرسانی",
+  "settingsWifiOnly": "فقط وای‌فای",
+  "settingsWifiOnlyDesc": "با داده‌ٔ همراه دانلود نشود. دانلودها تا دسترسی به وای‌فای یا اترنت منتظر می‌مانند.",
+  "statusScheduled": "زمان‌بندی‌شده · {when}",
+  "@statusScheduled": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "trayQuit": "خروج از ZapDL",
+  "trayShow": "نمایش ZapDL",
+  "updateAllReleases": "همهٔ نسخه‌ها",
+  "updateAuto": "بررسی خودکار به‌روزرسانی",
+  "updateAutoDesc": "حداکثر روزی یک بار، از نسخه‌های منتشرشده در گیت‌هاب پروژه.",
+  "updateAvailable": "نسخهٔ {version} در دسترس است",
+  "@updateAvailable": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "updateBeta": "شامل نسخه‌های آزمایشی (بتا)",
+  "updateBetaDesc": "نسخه‌های پیش‌انتشار ممکن است پایداری کمتری داشته باشند.",
+  "updateCancel": "توقف دانلود",
+  "updateCheckNow": "بررسی اکنون",
+  "updateDownload": "دانلود به‌روزرسانی",
+  "updateErrChecksum": "فایل دانلودشده با مجموع کنترلی (checksum) مطابقت نداشت و حذف شد. دوباره تلاش کنید.",
+  "updateErrDownload": "دانلود به‌روزرسانی ممکن نشد.",
+  "updateErrGeneric": "در به‌روزرسانی مشکلی پیش آمد.",
+  "updateErrInstall": "اجرای نصب‌کننده ممکن نشد.",
+  "updateErrNetwork": "اتصال به گیت‌هاب ممکن نشد. اتصال خود را بررسی کنید.",
+  "updateErrNoAsset": "این نسخه فایلی برای دستگاه شما ندارد. به‌جای آن صفحهٔ نسخه را باز کنید.",
+  "updateErrRateLimit": "گیت‌هاب فعلاً تعداد درخواست‌ها را محدود کرده است. کمی بعد دوباره تلاش کنید.",
+  "updateErrUnsupported": "این نوع فایل روی این دستگاه قابل نصب نیست.",
+  "updateFollowSystem": "برای پایان کار، مراحل نصب‌کنندهٔ سیستم را دنبال کنید.",
+  "updateFromFile": "نصب از فایل…",
+  "updateInstall": "نصب",
+  "updateInstallManually": "فایل در مدیر فایل نمایش داده شد. برای تکمیل نصب آن را باز کنید.",
+  "updateLastChecked": "آخرین بررسی: {when}",
+  "@updateLastChecked": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "updateLocalNewer": "این فایل نسخه‌ای جدیدتر از نسخهٔ نصب‌شده است.",
+  "updateLocalOlder": "این فایل از نسخهٔ نصب‌شده قدیمی‌تر است. نصب آن ZapDL را به نسخهٔ پایین‌تر برمی‌گرداند.",
+  "updateLocalSame": "این فایل هم‌نسخهٔ برنامهٔ نصب‌شده است.",
+  "updateLocalUnknown": "نسخه از نام فایل قابل تشخیص نبود. فقط فایل‌های مورد اعتماد را نصب کنید.",
+  "updateNotVerified": "مجموع کنترلی برای تأیید این فایل موجود نبود. فقط در صورت اعتماد به منبع نصب کنید.",
+  "updateOpenReleasePage": "باز کردن صفحهٔ نسخه",
+  "updateRestarting": "بستن ZapDL برای نصب به‌روزرسانی…",
+  "updateSkip": "نادیده گرفتن این نسخه",
+  "updateUpToDate": "جدیدترین نسخه را دارید.",
+  "updateVerified": "مجموع کنترلی تأیید شد (SHA-256).",
+  "updateView": "مشاهده",
+  "updateWhatsNew": "تازه‌ها",
+  "updateViaStore": "این نسخه از طریق فروشگاه برنامه منتشر شده و به‌روزرسانی‌ها را فروشگاه ارائه می‌کند. ZapDL را از فروشگاه به‌روزرسانی کنید.",
+  "themeChooseTitle": "تم خود را انتخاب کنید",
+  "themeChooseSubtitle": "چهار تم، هرکدام با حالت روشن و تیره.",
+  "themeForest": "جنگل",
+  "themeForestDesc": "بهار · آرام و سبز",
+  "themeSunset": "غروب",
+  "themeSunsetDesc": "پاییز · گرم و نارنجی",
+  "themeOcean": "اقیانوس",
+  "themeOceanDesc": "تابستان · خنک و آبی",
+  "themeGlacier": "یخچال طبیعی",
+  "themeGlacierDesc": "زمستان · روشن و یخی",
+  "themeModeLabel": "حالت",
+  "themeAuto": "خودکار",
+  "actionConfirm": "تایید",
+  "addGroup": "گروه لینک‌ها",
+  "addGroupHint": "هر خط یک لینک، به ترتیب دانلود",
+  "addGroupOrderInfo": "فایل‌ها یکی‌یکی و به همین ترتیب دانلود می‌شوند.",
+  "addAutoNext": "دانلود خودکار بخش‌های بعدی",
+  "addAutoNextHelp": "وقتی یک بخش تمام شد، ZapDL بخش بعدی (part1، part2، …) را پیدا و اضافه می‌کند.",
+  "addAutoNextSuggest": "این لینک شبیه یک بخش از فایل چندبخشی است. بخش‌های بعدی خودکار دانلود شوند؟",
+  "statusFileDeleted": "فایل حذف شده",
+  "fileDeletedHint": "این فایل از دستگاه شما حذف شده است.",
+  "actionRedownload": "دانلود دوباره"
+}

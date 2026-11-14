@@ -1,0 +1,107 @@
+name: zapdl
+description: "ZapDL - Download at the Speed of Zap. A universal, open-source download manager."
+publish_to: "none"
+version: 1.0.0+2
+
+environment:
+  sdk: ">=3.6.0 <4.0.0"
+  flutter: ">=3.27.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+
+  # State / DI
+  flutter_bloc: ^8.1.6
+  equatable: ^2.0.5
+  get_it: ^7.7.0
+
+  # Storage and files
+  path_provider: ^2.1.4
+  path: ^1.9.0
+  shared_preferences: ^2.3.2
+  flutter_secure_storage: ^9.2.2
+  crypto: ^3.0.5
+  file_picker: ^8.1.0
+  open_filex: ^4.5.0
+  url_launcher: ^6.3.0
+
+  # UI
+  flutter_colorpicker: ^1.1.0
+
+  # Platform integration (each is wrapped in lib/platform and fails safe)
+  connectivity_plus: ^6.0.5
+  flutter_local_notifications: ^17.2.4
+  local_notifier: ^0.1.6
+  window_manager: ^0.4.3
+  tray_manager: ^0.2.3
+  receive_sharing_intent: ^1.8.1
+  desktop_drop: ^0.4.4
+
+  # Media extraction (YouTube is pure Dart; other sites use lib/media adapters)
+  youtube_explode_dart: ^2.3.0
+  http: ^1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  flutter_launcher_icons: ^0.14.1
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  assets:
+    - assets/fonts/LICENSES.txt
+    - assets/tray/
+    - assets/icon/zapdl.png
+
+  fonts:
+    # Persian and Arabic UI text.
+    - family: Vazirmatn
+      fonts:
+        - asset: assets/fonts/vazirmatn/Vazirmatn-Regular.ttf
+        - asset: assets/fonts/vazirmatn/Vazirmatn-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/vazirmatn/Vazirmatn-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/vazirmatn/Vazirmatn-Bold.ttf
+          weight: 700
+    # English, Spanish and Russian UI text.
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/inter/Inter-Regular.otf
+        - asset: assets/fonts/inter/Inter-Medium.otf
+          weight: 500
+        - asset: assets/fonts/inter/Inter-SemiBold.otf
+          weight: 600
+        - asset: assets/fonts/inter/Inter-Bold.otf
+          weight: 700
+    # Chinese UI text (subset; rarer characters fall back to the system CJK font).
+    - family: NotoSansSC
+      fonts:
+        - asset: assets/fonts/noto_sans_sc/NotoSansSC-Regular.otf
+        - asset: assets/fonts/noto_sans_sc/NotoSansSC-Bold.otf
+          weight: 700
+
+# Generates launcher icons for every platform from assets/icon (run by
+# `dart tool/setup.dart`, or manually: dart run flutter_launcher_icons).
+flutter_launcher_icons:
+  image_path: "assets/icon/zapdl.png"
+  android: true
+  min_sdk_android: 21
+  adaptive_icon_background: "#1A5FF5"
+  adaptive_icon_foreground: "assets/icon/zapdl_foreground.png"
+  ios: true
+  remove_alpha_ios: true
+  windows:
+    generate: true
+    image_path: "assets/icon/zapdl.png"
+    icon_size: 256
+  macos:
+    generate: true
+    image_path: "assets/icon/zapdl.png"

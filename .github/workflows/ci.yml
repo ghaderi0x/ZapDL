@@ -1,0 +1,84 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  analyze-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      - run: flutter gen-l10n
+      # Formatting is reported but does not fail the build until the codebase
+      # has been formatted once with `dart format .` on a machine with Flutter.
+      - name: Check formatting
+        run: dart format --output=none --set-exit-if-changed .
+        continue-on-error: true
+      - run: flutter analyze
+      - run: flutter test
+
+  # Build jobs only run once the generated platform folders (created by
+  # `dart tool/setup.dart`) have been committed to the repository.
+  build-android:
+    needs: analyze-and-test
+    if: ${{ hashFiles('android/app/build.gradle*') != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - run: flutter pub get && flutter gen-l10n
+      - run: flutter build apk --debug
+
+  build-linux:
+    needs: analyze-and-test
+    if: ${{ hashFiles('linux/CMakeLists.txt') != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - run: sudo apt-get update && sudo apt-get install -y clang cmake ninja-build pkg-config libgtk-3-dev libayatana-appindicator3-dev libsecret-1-dev libnotify-dev
+      - run: flutter pub get && flutter gen-l10n
+      - run: flutter build linux
+
+  build-windows:
+    needs: analyze-and-test
+    if: ${{ hashFiles('windows/CMakeLists.txt') != '' }}
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - run: flutter pub get; flutter gen-l10n
+      - run: flutter build windows
+
+  build-macos:
+    needs: analyze-and-test
+    if: ${{ hashFiles('macos/Runner.xcodeproj/project.pbxproj') != '' }}
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - run: flutter pub get && flutter gen-l10n
+      - run: flutter build macos

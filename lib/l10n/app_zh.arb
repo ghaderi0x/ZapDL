@@ -1,0 +1,347 @@
+{
+  "@@locale": "zh",
+  "appName": "ZapDL",
+  "tagline": "以 Zap 的速度下载。",
+  "navDownloads": "下载",
+  "navStats": "统计",
+  "navSettings": "设置",
+  "statusAll": "全部",
+  "statusQueued": "排队中",
+  "statusDownloading": "下载中",
+  "statusPaused": "已暂停",
+  "statusCompleted": "已完成",
+  "statusFailed": "失败",
+  "statusCanceled": "已取消",
+  "catAll": "全部下载",
+  "catVideos": "视频",
+  "catAudio": "音频",
+  "catImages": "图片",
+  "catDocuments": "文档",
+  "catArchives": "压缩包",
+  "catApplications": "应用程序",
+  "catOther": "其他文件",
+  "actionPause": "暂停",
+  "actionResume": "继续",
+  "actionCancel": "取消下载",
+  "actionRetry": "重试",
+  "actionOpenFile": "打开文件",
+  "actionOpenFolder": "打开所在文件夹",
+  "actionCopyUrl": "复制下载链接",
+  "actionRemove": "从历史记录中移除",
+  "actionDeleteFile": "删除文件",
+  "actionPauseAll": "全部暂停",
+  "actionResumeAll": "全部继续",
+  "actionAdd": "添加",
+  "actionAddAnyway": "仍然添加",
+  "actionCheck": "检查链接",
+  "actionPaste": "粘贴",
+  "actionChange": "更改",
+  "actionDelete": "删除",
+  "actionClose": "关闭",
+  "actionApply": "应用",
+  "addTitle": "添加下载",
+  "addUrlHint": "粘贴下载链接（http 或 https）",
+  "addFileName": "文件名",
+  "addSaveTo": "保存到",
+  "addSize": "大小",
+  "addUnknownSize": "未知",
+  "addResumeYes": "支持多连接和断点续传",
+  "addResumeNo": "仅单连接；中断后无法续传",
+  "addDuplicate": "此链接已在你的下载列表中。",
+  "searchHint": "搜索下载",
+  "addOrPasteUrl": "添加下载或粘贴链接...",
+  "emptyTitle": "还没有下载",
+  "emptyBody": "粘贴链接即可开始第一个下载。",
+  "emptyFiltered": "没有符合此筛选条件的下载。",
+  "activeCount": "{count, plural, =1{1 个进行中} other{{count} 个进行中}}",
+  "@activeCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "overallSpeed": "速度",
+  "timeLeft": "剩余时间",
+  "colName": "名称",
+  "colSize": "大小",
+  "colStatus": "状态",
+  "colDate": "日期",
+  "confirmDeleteTitle": "删除文件？",
+  "confirmDeleteBody": "“{name}”将从你的设备上永久删除。",
+  "@confirmDeleteBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "clipboardLinkFound": "已复制一个链接。要添加到 ZapDL 吗？",
+  "linkCopied": "链接已复制",
+  "settingsAppearance": "外观",
+  "themeLight": "浅色",
+  "themeDark": "深色",
+  "themeSystem": "跟随系统",
+  "accentColor": "强调色",
+  "customColor": "自定义颜色",
+  "pickColor": "选择颜色",
+  "language": "语言",
+  "languageSystem": "系统默认",
+  "settingsDownloads": "下载",
+  "downloadFolder": "下载文件夹",
+  "maxConcurrent": "同时下载数",
+  "connectionsPer": "每个下载的连接数",
+  "speedLimitPer": "每个下载的速度限制",
+  "speedLimitNone": "不限速",
+  "settingsAbout": "关于",
+  "aboutNote": "ZapDL 免费且开源。下载仅在应用打开时运行。",
+  "statsTotalDownloaded": "累计下载",
+  "statsCompleted": "已完成",
+  "statsFailed": "失败",
+  "statsLast7": "最近 7 天",
+  "onb1Title": "所有下载，集中管理",
+  "onb1Body": "添加链接、查看进度，在清爽的面板中管理每个文件。",
+  "onb2Title": "多连接，更快速",
+  "onb2Body": "服务器允许时，ZapDL 会把文件分成多个部分同时下载。",
+  "onb3Title": "随时暂停与继续",
+  "onb3Body": "下载中断了？从中断处继续，即使重启应用也不怕。",
+  "onb4Title": "自动整理",
+  "onb4Body": "视频、音乐、图片、文档等会自动分类。",
+  "onbSkip": "跳过",
+  "onbNext": "下一步",
+  "onbStart": "开始使用",
+  "errNetwork": "网络出现问题，请检查连接。",
+  "errTimeout": "服务器响应超时。",
+  "errHttp": "服务器返回错误（HTTP {status}）。",
+  "@errHttp": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "errNotFound": "未找到文件，链接可能已过期。",
+  "errAccessDenied": "访问被拒绝，链接可能需要登录或已过期。",
+  "errRangeIgnored": "服务器不再支持续传。请重试以重新开始。",
+  "errChanged": "远程文件已更改。请重试以重新开始。",
+  "errStorageFull": "存储空间不足。",
+  "errPermission": "没有此文件夹的权限。",
+  "errWrite": "无法写入文件。",
+  "errIncomplete": "下载不完整。",
+  "errInvalidUrl": "这不是有效的链接。",
+  "errUnsupported": "暂不支持此类链接（FTP/SFTP）。",
+  "errTls": "安全连接失败。",
+  "errUnknown": "出了点问题。",
+  "detailsTitle": "下载详情",
+  "detailsSource": "来源链接",
+  "detailsDestination": "目标文件夹",
+  "detailsConnections": "连接数",
+  "detailsResumable": "可续传",
+  "detailsYes": "是",
+  "detailsNo": "否",
+  "detailsAdded": "添加时间",
+  "addRecent": "最近的链接",
+  "settingsAdvanced": "高级",
+  "cleanTempTitle": "清理临时文件",
+  "cleanTempBody": "移除已不存在的下载所遗留的部分数据。",
+  "cleanTempDone": "已释放 {size}。",
+  "@cleanTempDone": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "clearLinkHistory": "清除链接历史",
+  "linkHistoryCleared": "链接历史已清除",
+  "aboutVersion": "版本",
+  "aboutLicense": "许可证",
+  "aboutThirdParty": "第三方许可证",
+  "onb5Title": "适用于所有设备",
+  "onb5Body": "ZapDL 面向 Android、iOS、Windows、Linux 和 macOS 打造。",
+  "aboutGithub": "GitHub 上的源代码",
+  "aboutReportIssue": "报告问题",
+  "actionSave": "保存",
+  "addAdvanced": "高级选项",
+  "addCookies": "Cookie（可选）",
+  "addCookiesHint": "粘贴 cookies.txt 内容或 name=value; name2=value2",
+  "addFromPage": "来自 {site}",
+  "@addFromPage": {
+    "placeholders": {
+      "site": {
+        "type": "String"
+      }
+    }
+  },
+  "addPickQuality": "画质 / 格式",
+  "addReferer": "Referer（可选）",
+  "addSchedule": "定时…",
+  "addScheduleAt": "开始于 {when}",
+  "@addScheduleAt": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "addScheduleNow": "立即开始",
+  "backgroundNoteAndroid": "ZapDL 在后台时下载会继续，通知栏会显示进度。",
+  "backgroundNoteDesktop": "应用打开时会进行下载。开启“关闭到托盘”后，关闭窗口后仍会继续。",
+  "backgroundNoteIos": "iOS 会暂停后台应用。ZapDL 会暂停下载，并在你返回时自动继续。",
+  "bulkAdded": "已添加 {count} 个下载",
+  "@bulkAdded": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "bulkFailed": "{count} 个链接无法添加",
+  "@bulkFailed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dropHere": "拖放链接或 .txt / .url 文件以添加",
+  "errInvalidHeader": "某个请求头或 Cookie 无效。",
+  "errProxy": "代理设置无效。",
+  "gateNetwork": "正在等待允许的网络（离线或已开启“仅 Wi-Fi”）。",
+  "gateSchedule": "不在允许的下载时段内，进入时段后会自动开始。",
+  "gateSuspended": "应用在后台时已暂停，返回后将继续。",
+  "mediaErrBlocked": "网站拒绝或限制了请求，请稍后再试。",
+  "mediaErrLogin": "此内容不公开或需要登录。",
+  "mediaErrNetwork": "无法访问该网站。",
+  "mediaErrNotFound": "此链接中未找到可下载的媒体。",
+  "mediaErrParse": "无法解析网站的响应，网站可能已更改。",
+  "mediaErrUnsupported": "此页面没有 ZapDL 可下载的媒体。",
+  "mediaLegal": "仅下载你有权下载的内容，并遵守各网站的条款。",
+  "mediaNoteVideoOnly": "仅视频，无声音。如需声音，请另外下载音频项。",
+  "notifCompleted": "下载完成",
+  "notifFailed": "下载失败",
+  "notifOngoing": "{count} 个进行中 · {speed}",
+  "@notifOngoing": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "speed": {
+        "type": "String"
+      }
+    }
+  },
+  "notifUpdateBody": "ZapDL {version} 现已推出。",
+  "@notifUpdateBody": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "notifUpdateTitle": "有可用更新",
+  "proxyHost": "主机",
+  "proxyHttpOnly": "仅支持 HTTP 代理（HTTPS 站点使用 CONNECT），不支持 SOCKS。密码保存在安全存储中。",
+  "proxyManual": "手动（HTTP 代理）",
+  "proxyNone": "不使用代理",
+  "proxyPass": "密码",
+  "proxyPort": "端口",
+  "proxySystem": "系统 / 环境变量",
+  "proxyUser": "用户名",
+  "scheduleFrom": "从",
+  "scheduleTo": "到",
+  "settingsBackground": "后台与通知",
+  "settingsCloseToTray": "关闭后驻留托盘",
+  "settingsCloseToTrayDesc": "关闭窗口会将其隐藏；通过托盘图标显示或退出。",
+  "settingsNetwork": "网络",
+  "settingsNotifications": "下载完成或失败时通知",
+  "settingsProxy": "代理",
+  "settingsSaved": "已保存",
+  "settingsSchedule": "下载时段",
+  "settingsScheduleDesc": "每天仅在这些时间之间下载（支持跨夜时段）。",
+  "settingsScheduleEnable": "仅在指定时段下载",
+  "settingsUpdates": "更新",
+  "settingsWifiOnly": "仅 Wi-Fi",
+  "settingsWifiOnlyDesc": "不使用移动数据下载，等待 Wi-Fi 或以太网可用。",
+  "statusScheduled": "已定时 · {when}",
+  "@statusScheduled": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "trayQuit": "退出 ZapDL",
+  "trayShow": "显示 ZapDL",
+  "updateAllReleases": "所有版本",
+  "updateAuto": "自动检查更新",
+  "updateAutoDesc": "每天最多一次，来源为项目的 GitHub 发布页。",
+  "updateAvailable": "新版本 {version} 可用",
+  "@updateAvailable": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "updateBeta": "包含测试版",
+  "updateBetaDesc": "预发布版本可能不够稳定。",
+  "updateCancel": "暂停下载",
+  "updateCheckNow": "立即检查",
+  "updateDownload": "下载更新",
+  "updateErrChecksum": "下载的文件与校验和不符，已删除。请重试。",
+  "updateErrDownload": "无法下载更新。",
+  "updateErrGeneric": "更新时出了问题。",
+  "updateErrInstall": "无法启动安装程序。",
+  "updateErrNetwork": "无法连接 GitHub，请检查网络。",
+  "updateErrNoAsset": "此版本没有适用于你设备的文件，请打开发布页面。",
+  "updateErrRateLimit": "GitHub 暂时限制了请求，请稍后再试。",
+  "updateErrUnsupported": "此设备无法安装该类型的文件。",
+  "updateFollowSystem": "请按系统安装程序提示完成。",
+  "updateFromFile": "从文件安装…",
+  "updateInstall": "安装",
+  "updateInstallManually": "文件已在文件管理器中显示，打开它以完成安装。",
+  "updateLastChecked": "上次检查：{when}",
+  "@updateLastChecked": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "updateLocalNewer": "此文件比已安装的版本更新。",
+  "updateLocalOlder": "此文件比已安装版本旧，安装会使 ZapDL 降级。",
+  "updateLocalSame": "此文件与已安装版本相同。",
+  "updateLocalUnknown": "无法从文件名读取版本号。请仅安装可信文件。",
+  "updateNotVerified": "没有可用于验证此文件的校验和。仅在信任来源时安装。",
+  "updateOpenReleasePage": "打开发布页面",
+  "updateRestarting": "正在关闭 ZapDL 以安装更新…",
+  "updateSkip": "跳过此版本",
+  "updateUpToDate": "已是最新版本。",
+  "updateVerified": "校验和已验证（SHA-256）。",
+  "updateView": "查看",
+  "updateWhatsNew": "更新内容",
+  "updateViaStore": "此版本通过应用商店分发，更新由商店提供。请在应用商店中更新 ZapDL。",
+  "themeChooseTitle": "选择你的主题",
+  "themeChooseSubtitle": "四种主题，均支持浅色和深色。",
+  "themeForest": "森林",
+  "themeForestDesc": "春天 · 宁静清新",
+  "themeSunset": "日落",
+  "themeSunsetDesc": "秋天 · 温暖橙色",
+  "themeOcean": "海洋",
+  "themeOceanDesc": "夏天 · 清凉蓝色",
+  "themeGlacier": "冰川",
+  "themeGlacierDesc": "冬天 · 明亮冰蓝",
+  "themeModeLabel": "模式",
+  "themeAuto": "自动",
+  "actionConfirm": "确认",
+  "addGroup": "链接组",
+  "addGroupHint": "每行一个链接，按下载顺序",
+  "addGroupOrderInfo": "文件将按此顺序逐个下载。",
+  "addAutoNext": "自动下载后续分卷",
+  "addAutoNextHelp": "一个分卷完成后，ZapDL 会查找下一个分卷（如 part1、part2……）并自动添加。",
+  "addAutoNextSuggest": "这看起来是多分卷文件的一部分。是否自动下载后续分卷？",
+  "statusFileDeleted": "文件已删除",
+  "fileDeletedHint": "该文件已从你的设备中删除。",
+  "actionRedownload": "重新下载"
+}

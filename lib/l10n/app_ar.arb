@@ -1,0 +1,347 @@
+{
+  "@@locale": "ar",
+  "appName": "ZapDL",
+  "tagline": "حمّل بسرعة زاب.",
+  "navDownloads": "التنزيلات",
+  "navStats": "الإحصاءات",
+  "navSettings": "الإعدادات",
+  "statusAll": "الكل",
+  "statusQueued": "في الانتظار",
+  "statusDownloading": "جارٍ التنزيل",
+  "statusPaused": "متوقف مؤقتًا",
+  "statusCompleted": "مكتمل",
+  "statusFailed": "فشل",
+  "statusCanceled": "ملغى",
+  "catAll": "كل التنزيلات",
+  "catVideos": "الفيديو",
+  "catAudio": "الصوت",
+  "catImages": "الصور",
+  "catDocuments": "المستندات",
+  "catArchives": "الأرشيفات",
+  "catApplications": "التطبيقات",
+  "catOther": "ملفات أخرى",
+  "actionPause": "إيقاف مؤقت",
+  "actionResume": "استئناف",
+  "actionCancel": "إلغاء التنزيل",
+  "actionRetry": "إعادة المحاولة",
+  "actionOpenFile": "فتح الملف",
+  "actionOpenFolder": "فتح المجلد الحاوي",
+  "actionCopyUrl": "نسخ رابط التنزيل",
+  "actionRemove": "إزالة من السجل",
+  "actionDeleteFile": "حذف الملف",
+  "actionPauseAll": "إيقاف الكل مؤقتًا",
+  "actionResumeAll": "استئناف الكل",
+  "actionAdd": "إضافة",
+  "actionAddAnyway": "إضافة على أي حال",
+  "actionCheck": "فحص الرابط",
+  "actionPaste": "لصق",
+  "actionChange": "تغيير",
+  "actionDelete": "حذف",
+  "actionClose": "إغلاق",
+  "actionApply": "تطبيق",
+  "addTitle": "إضافة تنزيل",
+  "addUrlHint": "الصق رابط التنزيل (http أو https)",
+  "addFileName": "اسم الملف",
+  "addSaveTo": "الحفظ في",
+  "addSize": "الحجم",
+  "addUnknownSize": "غير معروف",
+  "addResumeYes": "يدعم الاتصالات المتعددة والاستئناف",
+  "addResumeNo": "اتصال واحد فقط؛ لا يمكن الاستئناف عند الانقطاع",
+  "addDuplicate": "هذا الرابط موجود بالفعل في تنزيلاتك.",
+  "searchHint": "البحث في التنزيلات",
+  "addOrPasteUrl": "أضف تنزيلًا أو الصق رابطًا...",
+  "emptyTitle": "لا توجد تنزيلات بعد",
+  "emptyBody": "الصق رابطًا لبدء أول تنزيل.",
+  "emptyFiltered": "لا توجد تنزيلات تطابق هذا المرشح.",
+  "activeCount": "{count, plural, =1{1 نشط} other{{count} نشطة}}",
+  "@activeCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "overallSpeed": "السرعة",
+  "timeLeft": "الوقت المتبقي",
+  "colName": "الاسم",
+  "colSize": "الحجم",
+  "colStatus": "الحالة",
+  "colDate": "التاريخ",
+  "confirmDeleteTitle": "حذف الملف؟",
+  "confirmDeleteBody": "سيتم حذف \"{name}\" نهائيًا من جهازك.",
+  "@confirmDeleteBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "clipboardLinkFound": "تم نسخ رابط. هل تريد إضافته إلى ZapDL؟",
+  "linkCopied": "تم نسخ الرابط",
+  "settingsAppearance": "المظهر",
+  "themeLight": "فاتح",
+  "themeDark": "داكن",
+  "themeSystem": "النظام",
+  "accentColor": "لون التمييز",
+  "customColor": "لون مخصص",
+  "pickColor": "اختر لونًا",
+  "language": "اللغة",
+  "languageSystem": "افتراضي النظام",
+  "settingsDownloads": "التنزيلات",
+  "downloadFolder": "مجلد التنزيل",
+  "maxConcurrent": "التنزيلات المتزامنة",
+  "connectionsPer": "الاتصالات لكل تنزيل",
+  "speedLimitPer": "حد السرعة لكل تنزيل",
+  "speedLimitNone": "غير محدود",
+  "settingsAbout": "حول",
+  "aboutNote": "ZapDL مجاني ومفتوح المصدر. تعمل التنزيلات فقط أثناء فتح التطبيق.",
+  "statsTotalDownloaded": "إجمالي التنزيل",
+  "statsCompleted": "مكتمل",
+  "statsFailed": "فشل",
+  "statsLast7": "آخر 7 أيام",
+  "onb1Title": "كل تنزيلاتك في مكان واحد",
+  "onb1Body": "أضف الروابط وتابع التقدم وأدر كل الملفات من لوحة واضحة.",
+  "onb2Title": "أسرع باتصالات متعددة",
+  "onb2Body": "عندما يسمح الخادم، يقسّم ZapDL الملف إلى أجزاء ويحمّلها معًا.",
+  "onb3Title": "إيقاف واستئناف في أي وقت",
+  "onb3Body": "انقطع التنزيل؟ تابع من حيث توقفت، حتى بعد إعادة تشغيل التطبيق.",
+  "onb4Title": "تنظيم تلقائي",
+  "onb4Body": "يتم فرز الفيديو والموسيقى والصور والمستندات وغيرها تلقائيًا.",
+  "onbSkip": "تخطي",
+  "onbNext": "التالي",
+  "onbStart": "ابدأ",
+  "errNetwork": "مشكلة في الشبكة. تحقق من اتصالك.",
+  "errTimeout": "استغرق الخادم وقتًا طويلًا للرد.",
+  "errHttp": "أعاد الخادم خطأ (HTTP {status}).",
+  "@errHttp": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "errNotFound": "الملف غير موجود. ربما انتهت صلاحية الرابط.",
+  "errAccessDenied": "تم رفض الوصول. قد يتطلب الرابط تسجيل الدخول أو انتهت صلاحيته.",
+  "errRangeIgnored": "لم يعد الخادم يدعم الاستئناف. أعد المحاولة للبدء من جديد.",
+  "errChanged": "تغيّر الملف على الخادم. أعد المحاولة للبدء من جديد.",
+  "errStorageFull": "لا توجد مساحة تخزين كافية.",
+  "errPermission": "تم رفض الإذن لهذا المجلد.",
+  "errWrite": "تعذّرت كتابة الملف.",
+  "errIncomplete": "كان التنزيل غير مكتمل.",
+  "errInvalidUrl": "هذا ليس رابطًا صالحًا.",
+  "errUnsupported": "هذا النوع من الروابط (FTP/SFTP) غير مدعوم بعد.",
+  "errTls": "فشل الاتصال الآمن.",
+  "errUnknown": "حدث خطأ ما.",
+  "detailsTitle": "تفاصيل التنزيل",
+  "detailsSource": "رابط المصدر",
+  "detailsDestination": "مجلد الوجهة",
+  "detailsConnections": "الاتصالات",
+  "detailsResumable": "قابل للاستئناف",
+  "detailsYes": "نعم",
+  "detailsNo": "لا",
+  "detailsAdded": "تاريخ الإضافة",
+  "addRecent": "الروابط الأخيرة",
+  "settingsAdvanced": "متقدم",
+  "cleanTempTitle": "حذف الملفات المؤقتة",
+  "cleanTempBody": "إزالة البيانات الجزئية المتبقية من تنزيلات لم تعد موجودة.",
+  "cleanTempDone": "تم تحرير {size}.",
+  "@cleanTempDone": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "clearLinkHistory": "مسح سجل الروابط",
+  "linkHistoryCleared": "تم مسح سجل الروابط",
+  "aboutVersion": "الإصدار",
+  "aboutLicense": "الترخيص",
+  "aboutThirdParty": "تراخيص الجهات الخارجية",
+  "onb5Title": "لكل أجهزتك",
+  "onb5Body": "تم تصميم ZapDL لأنظمة Android وiOS وWindows وLinux وmacOS.",
+  "aboutGithub": "الشيفرة المصدرية على GitHub",
+  "aboutReportIssue": "الإبلاغ عن مشكلة",
+  "actionSave": "حفظ",
+  "addAdvanced": "خيارات متقدمة",
+  "addCookies": "ملفات تعريف الارتباط (اختياري)",
+  "addCookiesHint": "ألصق محتوى cookies.txt أو name=value; name2=value2",
+  "addFromPage": "وُجد على {site}",
+  "@addFromPage": {
+    "placeholders": {
+      "site": {
+        "type": "String"
+      }
+    }
+  },
+  "addPickQuality": "الجودة / الصيغة",
+  "addReferer": "Referer (اختياري)",
+  "addSchedule": "جدولة…",
+  "addScheduleAt": "يبدأ في {when}",
+  "@addScheduleAt": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "addScheduleNow": "ابدأ فورًا",
+  "backgroundNoteAndroid": "تستمر التنزيلات أثناء وجود ZapDL في الخلفية، ويعرض إشعار التقدّم.",
+  "backgroundNoteDesktop": "تعمل التنزيلات أثناء فتح التطبيق. ومع تفعيل «الإغلاق إلى الدرج» تستمر بعد إغلاق النافذة.",
+  "backgroundNoteIos": "يوقف iOS التطبيقات في الخلفية. يوقف ZapDL التنزيلات مؤقتًا ويستأنفها عند عودتك.",
+  "bulkAdded": "تمت إضافة {count} تنزيلات",
+  "@bulkAdded": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "bulkFailed": "تعذّرت إضافة {count} روابط",
+  "@bulkFailed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dropHere": "أفلت الروابط أو ملف ‎.txt / .url‎ لإضافتها",
+  "errInvalidHeader": "قيمة ترويسة أو ملف تعريف ارتباط غير صالحة.",
+  "errProxy": "إعدادات الوكيل غير صالحة.",
+  "gateNetwork": "بانتظار اتصال مسموح (غير متصل، أو وضع «Wi-Fi فقط» مفعّل).",
+  "gateSchedule": "خارج ساعات التنزيل المسموحة. تبدأ التنزيلات تلقائيًا ضمن الفترة.",
+  "gateSuspended": "متوقفة مؤقتًا أثناء وجود التطبيق في الخلفية، وتُستأنف عند عودتك.",
+  "mediaErrBlocked": "رفض الموقع الطلب أو قيّده. حاول لاحقًا.",
+  "mediaErrLogin": "هذا المحتوى غير عام أو يتطلب تسجيل الدخول.",
+  "mediaErrNetwork": "تعذّر الوصول إلى الموقع.",
+  "mediaErrNotFound": "لم يُعثر على وسائط قابلة للتنزيل في هذا الرابط.",
+  "mediaErrParse": "تعذّر فهم استجابة الموقع. ربما تغيّر شكله.",
+  "mediaErrUnsupported": "لا تحتوي هذه الصفحة على وسائط يمكن لـ ZapDL تنزيلها.",
+  "mediaLegal": "نزّل فقط المحتوى الذي يحق لك تنزيله والتزم بشروط كل موقع.",
+  "mediaNoteVideoOnly": "فيديو فقط بلا صوت. نزّل خيار «Audio» أيضًا إن أردت الصوت.",
+  "notifCompleted": "اكتمل التنزيل",
+  "notifFailed": "فشل التنزيل",
+  "notifOngoing": "{count} نشط · {speed}",
+  "@notifOngoing": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "speed": {
+        "type": "String"
+      }
+    }
+  },
+  "notifUpdateBody": "الإصدار {version} من ZapDL متاح.",
+  "@notifUpdateBody": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "notifUpdateTitle": "تحديث متاح",
+  "proxyHost": "المضيف",
+  "proxyHttpOnly": "وكلاء HTTP فقط (مواقع HTTPS تستخدم CONNECT). SOCKS غير مدعوم. تُحفظ كلمة المرور في التخزين الآمن.",
+  "proxyManual": "يدوي (وكيل HTTP)",
+  "proxyNone": "بدون وكيل",
+  "proxyPass": "كلمة المرور",
+  "proxyPort": "المنفذ",
+  "proxySystem": "النظام / متغيرات البيئة",
+  "proxyUser": "اسم المستخدم",
+  "scheduleFrom": "من",
+  "scheduleTo": "إلى",
+  "settingsBackground": "الخلفية والإشعارات",
+  "settingsCloseToTray": "الاستمرار في الدرج عند الإغلاق",
+  "settingsCloseToTrayDesc": "يؤدي إغلاق النافذة إلى إخفائها؛ استخدم أيقونة الدرج للإظهار أو الخروج.",
+  "settingsNetwork": "الشبكة",
+  "settingsNotifications": "إشعار عند اكتمال التنزيلات أو فشلها",
+  "settingsProxy": "الوكيل",
+  "settingsSaved": "تم الحفظ",
+  "settingsSchedule": "جدولة التنزيل",
+  "settingsScheduleDesc": "التنزيل فقط بين هذه الساعات كل يوم (تعمل الفترات الليلية أيضًا).",
+  "settingsScheduleEnable": "حصر التنزيل في فترة زمنية",
+  "settingsUpdates": "التحديثات",
+  "settingsWifiOnly": "Wi-Fi فقط",
+  "settingsWifiOnlyDesc": "لا تنزّل عبر بيانات الجوال. تنتظر التنزيلات حتى يتوفر Wi-Fi أو إيثرنت.",
+  "statusScheduled": "مجدول · {when}",
+  "@statusScheduled": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "trayQuit": "إنهاء ZapDL",
+  "trayShow": "إظهار ZapDL",
+  "updateAllReleases": "جميع الإصدارات",
+  "updateAuto": "التحقق من التحديثات تلقائيًا",
+  "updateAutoDesc": "مرة واحدة يوميًا كحد أقصى، من إصدارات GitHub للمشروع.",
+  "updateAvailable": "الإصدار {version} متاح",
+  "@updateAvailable": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "updateBeta": "تضمين الإصدارات التجريبية",
+  "updateBetaDesc": "قد تكون الإصدارات التجريبية أقل استقرارًا.",
+  "updateCancel": "إيقاف التنزيل مؤقتًا",
+  "updateCheckNow": "تحقق الآن",
+  "updateDownload": "تنزيل التحديث",
+  "updateErrChecksum": "لم يطابق الملف المنزَّل مجموعه الاختباري وتم حذفه. حاول مرة أخرى.",
+  "updateErrDownload": "تعذّر تنزيل التحديث.",
+  "updateErrGeneric": "حدث خطأ أثناء التحديث.",
+  "updateErrInstall": "تعذّر تشغيل المثبّت.",
+  "updateErrNetwork": "تعذّر الوصول إلى GitHub. تحقق من اتصالك.",
+  "updateErrNoAsset": "لا يحتوي هذا الإصدار على ملف لجهازك. افتح صفحة الإصدار بدلًا من ذلك.",
+  "updateErrRateLimit": "يحدّ GitHub من الطلبات حاليًا. حاول بعد قليل.",
+  "updateErrUnsupported": "لا يمكن تثبيت هذا النوع من الملفات على هذا الجهاز.",
+  "updateFollowSystem": "اتبع مثبّت النظام لإكمال العملية.",
+  "updateFromFile": "التثبيت من ملف…",
+  "updateInstall": "تثبيت",
+  "updateInstallManually": "ظهر الملف في مدير الملفات. افتحه لإكمال التثبيت.",
+  "updateLastChecked": "آخر تحقق: {when}",
+  "@updateLastChecked": {
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "updateLocalNewer": "هذا الملف إصدار أحدث من المثبّت.",
+  "updateLocalOlder": "هذا الملف أقدم من الإصدار المثبّت. تثبيته سيعيد ZapDL إلى إصدار أقدم.",
+  "updateLocalSame": "هذا الملف بنفس إصدار المثبّت.",
+  "updateLocalUnknown": "تعذّرت قراءة الإصدار من اسم الملف. ثبّت الملفات الموثوقة فقط.",
+  "updateNotVerified": "لا يتوفر مجموع اختباري للتحقق من هذا الملف. ثبّته فقط إن وثقت بالمصدر.",
+  "updateOpenReleasePage": "فتح صفحة الإصدار",
+  "updateRestarting": "إغلاق ZapDL لتثبيت التحديث…",
+  "updateSkip": "تخطي هذا الإصدار",
+  "updateUpToDate": "لديك أحدث إصدار.",
+  "updateVerified": "تم التحقق من المجموع الاختباري (SHA-256).",
+  "updateView": "عرض",
+  "updateWhatsNew": "الجديد",
+  "updateViaStore": "يُوزَّع هذا الإصدار عبر متجر تطبيقات يوفّر التحديثات. حدّث ZapDL من المتجر.",
+  "themeChooseTitle": "اختر السمة",
+  "themeChooseSubtitle": "أربع سمات، لكل منها وضع فاتح وداكن.",
+  "themeForest": "الغابة",
+  "themeForestDesc": "الربيع · هادئ وأخضر",
+  "themeSunset": "الغروب",
+  "themeSunsetDesc": "الخريف · دافئ وبرتقالي",
+  "themeOcean": "المحيط",
+  "themeOceanDesc": "الصيف · منعش وأزرق",
+  "themeGlacier": "النهر الجليدي",
+  "themeGlacierDesc": "الشتاء · مشرق وجليدي",
+  "themeModeLabel": "الوضع",
+  "themeAuto": "تلقائي",
+  "actionConfirm": "تأكيد",
+  "addGroup": "مجموعة روابط",
+  "addGroupHint": "رابط في كل سطر، بترتيب التنزيل",
+  "addGroupOrderInfo": "تُنزَّل الملفات واحدًا تلو الآخر بهذا الترتيب.",
+  "addAutoNext": "تنزيل الأجزاء التالية تلقائيًا",
+  "addAutoNextHelp": "عند انتهاء جزء، يبحث ZapDL عن الجزء التالي (part1، part2، …) ويضيفه.",
+  "addAutoNextSuggest": "يبدو أن هذا جزء من ملف متعدد الأجزاء. هل تريد تنزيل الأجزاء التالية تلقائيًا؟",
+  "statusFileDeleted": "الملف محذوف",
+  "fileDeletedHint": "تم حذف هذا الملف من جهازك.",
+  "actionRedownload": "تنزيل مرة أخرى"
+}
