@@ -88,7 +88,7 @@ jobs:
               -validity 30 -storepass throwaway123 -keypass throwaway123 -dname "CN=ZapDL CI test"
           fi
           tool/build_android.sh
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with: { name: android, path: dist/* }
 
   windows:
@@ -109,7 +109,7 @@ jobs:
           Compress-Archive -Path build\windows\x64\runner\Release\* -DestinationPath "dist\ZapDL-$v-windows-x64.zip"
           choco install innosetup -y --no-progress
           & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" "/DAppVersion=$v" installer\windows\zapdl.iss
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with: { name: windows, path: dist/* }
 
   linux:
@@ -126,7 +126,7 @@ jobs:
       - run: |
           mkdir -p dist
           tar -C build/linux/x64/release/bundle -czf "dist/ZapDL-${{ needs.check.outputs.version }}-linux-x64.tar.gz" .
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with: { name: linux, path: dist/* }
 
   macos:
@@ -144,7 +144,7 @@ jobs:
       - run: |
           mkdir -p dist
           hdiutil create -volname ZapDL -srcfolder build/macos/Build/Products/Release/zapdl.app -ov -format UDZO "dist/ZapDL-${{ needs.check.outputs.version }}-macos.dmg"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with: { name: macos, path: dist/* }
 
   publish:
