@@ -87,6 +87,8 @@ jobs:
       - run: |
           mkdir -p dist
           tar -C build/linux/x64/release/bundle -czf "dist/ZapDL-${{ needs.check.outputs.version }}-linux-x64.tar.gz" .
+      - name: Build .deb installer
+        run: tool/build_deb.sh "${{ needs.check.outputs.version }}"
       - uses: actions/upload-artifact@v4
         with: { name: linux, path: dist/* }
 
