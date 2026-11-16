@@ -110,7 +110,7 @@ class _NetworkSectionState extends State<NetworkSection> {
             Text(l.settingsProxy, style: Theme.of(context).textTheme.labelLarge),
             const SizedBox(height: 8),
             DropdownButtonFormField<ProxyMode>(
-              initialValue: _mode,
+              value: _mode,
               items: [
                 for (final m in ProxyMode.values)
                   DropdownMenuItem(value: m, child: Text(_modeLabel(l, m))),
@@ -246,6 +246,36 @@ class ScheduleSection extends StatelessWidget {
                   ),
                 ),
               ]),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// Notifications, tray and platform notes about background downloads.
+/// Opt-in: encrypted DNS + split TLS handshake for name-based filtering.
+class FilterBypassSection extends StatelessWidget {
+  const FilterBypassSection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context);
+    final cubit = context.read<SettingsCubit>();
+    return BlocBuilder<SettingsCubit, SettingsState>(
+      buildWhen: (a, b) => a.filterBypass != b.filterBypass || a.proxyMode != b.proxyMode,
+      builder: (context, s) => ZapCard(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SwitchListTile(
+              contentPadding: EdgeInsets.zero,
+              title: Text(l.filterBypassTitle),
+              subtitle: Text(l.filterBypassDesc),
+              value: s.filterBypass,
+              onChanged: s.proxyMode == ProxyMode.manual ? null : cubit.setFilterBypass,
+            ),
+            Text(l.filterBypassNote, style: Theme.of(context).textTheme.bodySmall),
           ],
         ),
       ),

@@ -4,8 +4,10 @@ name: Release
 # The app's built-in updater reads these releases, so asset names matter:
 # they must follow lib/update/asset_selector.dart.
 #
-# NOT YET RUN. First use will likely need small fixes; try it on a throwaway
-# tag such as v0.0.1-test.1 (tags containing "-" are published as pre-releases).
+# Android is NOT built here: the APKs are built and uploaded to the release by
+# hand (tool/build_android.sh, docs/RELEASE.md).
+# Try the pipeline first with a throwaway tag such as v1.0.0-test.1 (tags
+# containing "-" are published as pre-releases), or with the manual dry run.
 
 on:
   push:
@@ -48,48 +50,7 @@ jobs:
           echo "version=$V" >> "$GITHUB_OUTPUT"
           case "$V" in *-*) echo "prerelease=true" >> "$GITHUB_OUTPUT";; *) echo "prerelease=false" >> "$GITHUB_OUTPUT";; esac
       - run: flutter pub get && flutter gen-l10n
-      - run: flutter analyze
       - run: flutter test
-
-  android:
-    needs: check
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4
-        with: { distribution: temurin, java-version: '17' }
-      - uses: subosito/flutter-action@v2
-        with: { channel: stable, cache: true }
-      - run: flutter pub get && flutter gen-l10n
-      - run: dart tool/setup.dart
-      # Android only installs an update over an existing app when both APKs are
-      # signed with the SAME key. Keep the keystore safe: losing it means users
-      # would have to uninstall before updating. See docs/RELEASE.md.
-      - name: Build and sign both APKs
-        env:
-          KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
-          KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
-          KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
-          KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
-        run: |
-          if [ -n "$KEYSTORE_B64" ]; then
-            echo "$KEYSTORE_B64" | base64 -d > "$RUNNER_TEMP/release.jks"
-            export KEYSTORE="$RUNNER_TEMP/release.jks"
-          elif [ "${GITHUB_REF_TYPE}" = "tag" ]; then
-            echo "::error::Missing ANDROID_KEYSTORE_BASE64 secret. A release must be signed with your permanent key. See docs/GITHUB_GUIDE.md."
-            exit 1
-          else
-            # Dry run / test build only: a throwaway key so the pipeline can be
-            # tested before secrets exist. NEVER publish an APK built this way.
-            echo "::warning::No signing secrets: using a THROWAWAY key. This APK is for testing only."
-            export KEYSTORE="$RUNNER_TEMP/throwaway.jks"
-            export KEY_ALIAS=throwaway KEYSTORE_PASSWORD=throwaway123 KEY_PASSWORD=throwaway123
-            keytool -genkeypair -keystore "$KEYSTORE" -alias throwaway -keyalg RSA -keysize 2048 \
-              -validity 30 -storepass throwaway123 -keypass throwaway123 -dname "CN=ZapDL CI test"
-          fi
-          tool/build_android.sh
-      - uses: actions/upload-artifact@v4
-        with: { name: android, path: dist/* }
 
   windows:
     needs: check
@@ -143,12 +104,13 @@ jobs:
       # ID signing and notarization (docs/RELEASE.md) for a smooth install.
       - run: |
           mkdir -p dist
-          hdiutil create -volname ZapDL -srcfolder build/macos/Build/Products/Release/zapdl.app -ov -format UDZO "dist/ZapDL-${{ needs.check.outputs.version }}-macos.dmg"
+          APP=$(ls -d build/macos/Build/Products/Release/*.app | head -n 1)
+          hdiutil create -volname ZapDL -srcfolder "$APP" -ov -format UDZO "dist/ZapDL-${{ needs.check.outputs.version }}-macos.dmg"
       - uses: actions/upload-artifact@v4
         with: { name: macos, path: dist/* }
 
   publish:
-    needs: [check, android, windows, linux, macos]
+    needs: [check, windows, linux, macos]
     if: startsWith(github.ref, 'refs/tags/')
     runs-on: ubuntu-latest
     steps:

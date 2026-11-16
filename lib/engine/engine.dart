@@ -6,6 +6,7 @@ import 'package:path/path.dart' as p;
 
 import 'errors.dart';
 import 'cookies.dart';
+import 'file_category.dart';
 import 'file_utils.dart';
 import 'http_support.dart';
 import 'models.dart';
@@ -67,6 +68,10 @@ class DownloadEngine {
   bool _saving = false;
   int _ticksSinceSave = 0;
   bool _disposed = false;
+
+  /// When set, a download added to exactly this folder is placed in a
+  /// subfolder for its type (Videos, Music, Documents, ...).
+  String? categoryRoot;
   bool _networkAllowed = true;
   bool _suspended = false;
   EngineGate _gate = EngineGate.open;
@@ -169,6 +174,11 @@ class DownloadEngine {
           proxy: config.proxy,
         );
     final custom = fileName?.trim() ?? '';
+    final finalName = sanitizeFileName(custom.isNotEmpty ? custom : pr.fileName);
+    final root = categoryRoot;
+    final targetDir = (root != null && p.equals(directory, root))
+        ? p.join(directory, categoryFolderName(categoryFor(finalName, mime: pr.mimeType)))
+        : directory;
     final task = DownloadTask(
       id: _newId(),
       url: req.url,
@@ -179,8 +189,8 @@ class DownloadEngine {
       groupId: groupId,
       groupOrder: groupOrder,
       autoNext: autoNext,
-      fileName: sanitizeFileName(custom.isNotEmpty ? custom : pr.fileName),
-      directory: directory,
+      fileName: finalName,
+      directory: targetDir,
       totalBytes: pr.totalBytes,
       rangeSupported: pr.rangeSupported,
       etag: pr.etag,

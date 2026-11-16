@@ -51,6 +51,7 @@ String mediaErrorText(AppLocalizations l, MediaException e) => switch (e.reason)
       'blocked' => l.mediaErrBlocked,
       'network' => l.mediaErrNetwork,
       'parse' => l.mediaErrParse,
+      'drm' => l.mediaErrDrm,
       _ => l.mediaErrUnsupported,
     };
 

@@ -212,7 +212,7 @@
   "gateSuspended": "En pausa mientras la app está en segundo plano. Se reanudan al volver.",
   "mediaErrBlocked": "El sitio rechazó o limitó la solicitud. Inténtalo más tarde.",
   "mediaErrLogin": "Este contenido no es público o requiere iniciar sesión.",
-  "mediaErrNetwork": "No se pudo acceder al sitio.",
+  "mediaErrNetwork": "No se pudo acceder al sitio. Si está bloqueado donde vives, activa una VPN o configura un proxy en Ajustes → Red.",
   "mediaErrNotFound": "No se encontró contenido descargable en este enlace.",
   "mediaErrParse": "No se pudo interpretar la respuesta del sitio. Puede haber cambiado.",
   "mediaErrUnsupported": "Esta página no tiene contenido que ZapDL pueda descargar.",
@@ -343,5 +343,11 @@
   "addAutoNextSuggest": "Parece una parte de un archivo en varias partes. ¿Descargar las siguientes automáticamente?",
   "statusFileDeleted": "Archivo eliminado",
   "fileDeletedHint": "Este archivo se eliminó de tu dispositivo.",
-  "actionRedownload": "Descargar de nuevo"
+  "actionRedownload": "Descargar de nuevo",
+  "settingsSortFolders": "Ordenar en carpetas por tipo",
+  "settingsSortFoldersHelp": "Vídeos, música, imágenes, documentos, archivos y programas tienen su propia carpeta dentro de la carpeta de descargas.",
+  "filterBypassTitle": "Acceder a sitios filtrados sin VPN",
+  "filterBypassDesc": "Usa DNS cifrado y fragmenta el inicio de la conexión para que los filtros por nombre no la reconozcan. Desactivado por defecto.",
+  "filterBypassNote": "No es una VPN: no oculta nada a tu proveedor, no supera bloqueos por IP (algunos servidores de Telegram) y solo funciona con algunos proveedores. Pruébalo y desactívalo si no ayuda.",
+  "mediaErrDrm": "Los streams de Spotify están cifrados (DRM), así que ZapDL no puede descargar de Spotify. Usa SoundCloud, YouTube o un archivo tuyo."
 }

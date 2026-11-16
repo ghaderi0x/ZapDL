@@ -151,10 +151,8 @@ class DownloadCard extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        t.fileName,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
+                      OpenableName(
+                        task: t,
                         style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                               decoration: failed ? TextDecoration.lineThrough : null,
                               color: failed ? z.textMuted : null,
@@ -321,10 +319,7 @@ class _DownloadRowState extends State<DownloadRow> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(t.fileName,
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                            style: textTheme.bodyLarge),
+                        OpenableName(task: t, style: textTheme.bodyLarge),
                         Text(categoryLabel(l, category), style: textTheme.labelSmall),
                       ],
                     ),
@@ -395,6 +390,46 @@ class _DownloadRowState extends State<DownloadRow> {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+
+/// File name that opens the file when tapped (finished downloads only).
+/// While a download is unfinished, or its file is gone, a tap falls through to
+/// the row, which opens the details.
+class OpenableName extends StatefulWidget {
+  const OpenableName({super.key, required this.task, this.style});
+
+  final DownloadTask task;
+  final TextStyle? style;
+
+  @override
+  State<OpenableName> createState() => _OpenableNameState();
+}
+
+class _OpenableNameState extends State<OpenableName> {
+  bool _hover = false;
+
+  @override
+  Widget build(BuildContext context) {
+    final t = widget.task;
+    final openable = t.status == DownloadStatus.completed && !t.fileMissing;
+    var style = widget.style;
+    if (openable && _hover) {
+      style = (style ?? const TextStyle())
+          .copyWith(decoration: TextDecoration.underline, color: context.zap.accent);
+    }
+    final text = Text(t.fileName, maxLines: 1, overflow: TextOverflow.ellipsis, style: style);
+    if (!openable) return text;
+    return MouseRegion(
+      cursor: SystemMouseCursors.click,
+      onEnter: (_) => setState(() => _hover = true),
+      onExit: (_) => setState(() => _hover = false),
+      child: GestureDetector(
+        onTap: () => runDownloadAction(context, t, DownloadAction.openFile),
+        child: text,
       ),
     );
   }

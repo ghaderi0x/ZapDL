@@ -212,7 +212,7 @@
   "gateSuspended": "Paused while the app is in the background. They resume when you return.",
   "mediaErrBlocked": "The site refused or limited the request. Try again later.",
   "mediaErrLogin": "This content isn't public or needs you to sign in.",
-  "mediaErrNetwork": "Couldn't reach the site.",
+  "mediaErrNetwork": "Couldn't reach the site. If it is filtered where you live, turn on \"Reach filtered sites without a VPN\" in Settings, or use a proxy/VPN.",
   "mediaErrNotFound": "No downloadable media was found at this link.",
   "mediaErrParse": "The site's response couldn't be understood. It may have changed.",
   "mediaErrUnsupported": "This page has no media ZapDL can download.",
@@ -343,5 +343,11 @@
   "addAutoNextSuggest": "This looks like one part of a multi-part file. Download the next parts automatically?",
   "statusFileDeleted": "File deleted",
   "fileDeletedHint": "This file was removed from your device.",
-  "actionRedownload": "Download again"
+  "actionRedownload": "Download again",
+  "settingsSortFolders": "Sort into category folders",
+  "settingsSortFoldersHelp": "Videos, Music, Images, Documents, Archives and Programs get their own folders inside your download folder.",
+  "filterBypassTitle": "Reach filtered sites without a VPN",
+  "filterBypassDesc": "Uses encrypted DNS and splits the connection start so name-based filters may not recognise it. Off by default.",
+  "filterBypassNote": "Not a VPN: it hides nothing from your provider, cannot beat blocks by IP address (some Telegram servers), and works only on some providers. Try it, and turn it off if it doesn't help.",
+  "mediaErrDrm": "Spotify streams are encrypted (DRM), so ZapDL can't download from Spotify. Use SoundCloud, YouTube or a file you own instead."
 }

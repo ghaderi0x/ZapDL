@@ -40,3 +40,15 @@ FileCategory categoryFor(String fileName, {String? mime}) {
   }
   return FileCategory.other;
 }
+
+/// Folder name used when downloads are sorted by type (kept in English so the
+/// names on disk do not depend on the app language).
+String categoryFolderName(FileCategory c) => switch (c) {
+      FileCategory.video => 'Videos',
+      FileCategory.audio => 'Music',
+      FileCategory.image => 'Images',
+      FileCategory.document => 'Documents',
+      FileCategory.archive => 'Archives',
+      FileCategory.application => 'Programs',
+      FileCategory.other => 'Other',
+    };

@@ -1,6 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:path/path.dart' as pth;
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../core/theme/accent_palette.dart';
@@ -40,6 +41,8 @@ class SettingsState extends Equatable {
     this.scheduleStartMinute = 23 * 60,
     this.scheduleEndMinute = 6 * 60,
     this.closeToTray = true,
+    this.sortIntoFolders = true,
+    this.filterBypass = false,
     this.notificationsEnabled = true,
     this.autoCheckUpdates = true,
     this.betaChannel = false,
@@ -76,6 +79,10 @@ class SettingsState extends Equatable {
 
   /// Desktop: closing the window keeps ZapDL running in the tray.
   final bool closeToTray;
+
+  /// Put downloads into Videos / Music / Documents ... inside the download folder.
+  final bool sortIntoFolders;
+  final bool filterBypass;
   final bool notificationsEnabled;
   final bool autoCheckUpdates;
 
@@ -119,6 +126,8 @@ class SettingsState extends Equatable {
     int? scheduleStartMinute,
     int? scheduleEndMinute,
     bool? closeToTray,
+    bool? sortIntoFolders,
+    bool? filterBypass,
     bool? notificationsEnabled,
     bool? autoCheckUpdates,
     bool? betaChannel,
@@ -144,6 +153,8 @@ class SettingsState extends Equatable {
         scheduleStartMinute: scheduleStartMinute ?? this.scheduleStartMinute,
         scheduleEndMinute: scheduleEndMinute ?? this.scheduleEndMinute,
         closeToTray: closeToTray ?? this.closeToTray,
+        sortIntoFolders: sortIntoFolders ?? this.sortIntoFolders,
+        filterBypass: filterBypass ?? this.filterBypass,
         notificationsEnabled: notificationsEnabled ?? this.notificationsEnabled,
         autoCheckUpdates: autoCheckUpdates ?? this.autoCheckUpdates,
         betaChannel: betaChannel ?? this.betaChannel,
@@ -171,6 +182,8 @@ class SettingsState extends Equatable {
         scheduleStartMinute,
         scheduleEndMinute,
         closeToTray,
+        sortIntoFolders,
+        filterBypass,
         notificationsEnabled,
         autoCheckUpdates,
         betaChannel,
@@ -211,6 +224,12 @@ class SettingsCubit extends Cubit<SettingsState> {
     }
   }
 
+  static String _migrateDir(String? saved, String defaultDir) {
+    if (saved == null || saved.isEmpty) return defaultDir;
+    final plainDownloads = pth.dirname(defaultDir);
+    return saved == plainDownloads ? defaultDir : saved;
+  }
+
   static SettingsState _load(SharedPreferences p, String defaultDir) {
     final modeName = p.getString('themeMode');
     final lang = p.getString('language');
@@ -221,7 +240,8 @@ class SettingsCubit extends Cubit<SettingsState> {
       ),
       palette: AccentPalette.deserialize(p.getString('accent')),
       languageCode: supportedLanguageCodes.contains(lang) ? lang : null,
-      downloadDir: p.getString('downloadDir') ?? defaultDir,
+      // Older versions saved straight into Downloads; move those users to ZapFiles.
+      downloadDir: _migrateDir(p.getString('downloadDir'), defaultDir),
       maxConcurrent: (p.getInt('maxConcurrent') ?? 3).clamp(1, 8),
       connections: (p.getInt('connections') ?? 4).clamp(1, 16),
       speedLimitKb: p.getInt('speedLimitKb') ?? 0,
@@ -237,6 +257,8 @@ class SettingsCubit extends Cubit<SettingsState> {
       scheduleStartMinute: (p.getInt('scheduleStart') ?? 23 * 60).clamp(0, 1439),
       scheduleEndMinute: (p.getInt('scheduleEnd') ?? 6 * 60).clamp(0, 1439),
       closeToTray: p.getBool('closeToTray') ?? true,
+      sortIntoFolders: p.getBool('sortIntoFolders') ?? true,
+      filterBypass: p.getBool('filterBypass') ?? false,
       notificationsEnabled: p.getBool('notifications') ?? true,
       autoCheckUpdates: p.getBool('autoCheckUpdates') ?? true,
       betaChannel: p.getBool('betaChannel') ?? false,
@@ -349,6 +371,16 @@ class SettingsCubit extends Cubit<SettingsState> {
       scheduleEndMinute: endMinute,
     ));
     _applyToEngine();
+  }
+
+  void setFilterBypass(bool v) {
+    _prefs.setBool('filterBypass', v);
+    emit(state.copyWith(filterBypass: v));
+  }
+
+  void setSortIntoFolders(bool v) {
+    _prefs.setBool('sortIntoFolders', v);
+    emit(state.copyWith(sortIntoFolders: v));
   }
 
   void setCloseToTray(bool v) {

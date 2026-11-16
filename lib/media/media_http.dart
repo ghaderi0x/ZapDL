@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
@@ -46,6 +47,43 @@ Future<String> fetchText(
     throw MediaException('network', f.code.name);
   } on SocketException catch (e) {
     throw MediaException('network', e.message);
+  } finally {
+    client.close(force: true);
+  }
+}
+
+/// POSTs a JSON body and returns the response text (used for YouTube's player API).
+Future<String> postJson(
+  Uri uri,
+  Map<String, dynamic> body, {
+  Map<String, String> headers = const {},
+  ProxyConfig proxy = const ProxyConfig(),
+  Duration timeout = const Duration(seconds: 20),
+}) async {
+  final client = createHttpClient(connectTimeout: timeout, proxy: proxy);
+  try {
+    final req = await client.postUrl(uri).timeout(timeout);
+    req.headers.contentType = ContentType.json;
+    headers.forEach(req.headers.set);
+    req.add(utf8.encode(jsonEncode(body)));
+    final res = await req.close().timeout(timeout);
+    if (res.statusCode == 429) throw const MediaException('blocked');
+    if (res.statusCode == 403) throw const MediaException('blocked');
+    if (res.statusCode != 200) throw MediaException('network', '${res.statusCode}');
+    final bytes = <int>[];
+    await for (final chunk in res.timeout(timeout)) {
+      bytes.addAll(chunk);
+      if (bytes.length > 4 * 1024 * 1024) break;
+    }
+    return utf8.decode(bytes, allowMalformed: true);
+  } on MediaException {
+    rethrow;
+  } on SocketException catch (e) {
+    throw MediaException('network', e.message);
+  } on HandshakeException catch (e) {
+    throw MediaException('network', e.message);
+  } on TimeoutException {
+    throw const MediaException('network', 'timeout');
   } finally {
     client.close(force: true);
   }

@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../core/theme/app_theme.dart';
 import '../core/theme/zap_colors.dart';
 import '../engine/file_category.dart';
+import '../features/settings/settings_cubit.dart';
+import '../l10n/gen/app_localizations.dart';
 
 /// Rounded, outlined surface used for every grouped section (refs R1, R4, R5).
 class ZapCard extends StatelessWidget {
@@ -184,6 +187,25 @@ class ZapLogo extends StatelessWidget {
       height: size,
       filterQuality: FilterQuality.medium,
       semanticLabel: 'ZapDL',
+    );
+  }
+}
+
+
+/// Small sun/moon button: flips between light and dark (an explicit choice,
+/// replacing "system"; Auto stays available in Settings).
+class ThemeToggleButton extends StatelessWidget {
+  const ThemeToggleButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final dark = Theme.of(context).brightness == Brightness.dark;
+    final l = AppLocalizations.of(context);
+    return IconButton(
+      tooltip: dark ? l.themeLight : l.themeDark,
+      icon: Icon(dark ? Icons.light_mode_outlined : Icons.dark_mode_outlined),
+      onPressed: () =>
+          context.read<SettingsCubit>().setThemeMode(dark ? ThemeMode.light : ThemeMode.dark),
     );
   }
 }

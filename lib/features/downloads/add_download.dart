@@ -193,10 +193,7 @@ class _AddDownloadFormState extends State<AddDownloadForm> {
         return;
       } on MediaException catch (e) {
         if (!mounted) return;
-        final platformLink = MediaResolver.isYouTube(uri) ||
-            MediaResolver.isReddit(uri) ||
-            MediaResolver.isTelegram(uri);
-        if (platformLink) {
+        if (MediaResolver.isKnownPlatform(uri)) {
           setState(() {
             _mediaError = mediaErrorText(AppLocalizations.of(context), e);
             _phase = _Phase.error;
@@ -204,6 +201,14 @@ class _AddDownloadFormState extends State<AddDownloadForm> {
           return;
         }
         // Not a media page: it may still be a direct file without an extension.
+      } catch (_) {
+        if (!mounted) return;
+        setState(() {
+          _mediaError = mediaErrorText(
+              AppLocalizations.of(context), const MediaException('network'));
+          _phase = _Phase.error;
+        });
+        return;
       }
     }
 
@@ -431,7 +436,7 @@ class _AddDownloadFormState extends State<AddDownloadForm> {
                 style: Theme.of(context).textTheme.bodySmall),
             const SizedBox(height: 12),
             DropdownButtonFormField<MediaFormat>(
-              initialValue: _format,
+              value: _format,
               isExpanded: true,
               decoration: InputDecoration(labelText: l.addPickQuality),
               items: [

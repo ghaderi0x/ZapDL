@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 import 'dart:typed_data';
@@ -183,9 +184,9 @@ void main() {
     });
 
     test('version from file name and installable types', () {
-      expect(versionFromFileName('ZapDL-1.2.3-windows-x64-setup.exe'), const SemVer(1, 2, 3));
+      expect(versionFromFileName('ZapDL-1.2.3-windows-x64-setup.exe'), SemVer(1, 2, 3));
       expect(versionFromFileName('ZapDL-1.2.3-beta.1-android.apk').toString(), '1.2.3-beta.1');
-      expect(versionFromFileName('ZapDL-1.2.3.dmg'), const SemVer(1, 2, 3));
+      expect(versionFromFileName('ZapDL-1.2.3.dmg'), SemVer(1, 2, 3));
       expect(versionFromFileName('random.apk'), isNull);
       expect(isInstallableFile('x.apk', UpdatePlatform.android), isTrue);
       expect(isInstallableFile('x.apk', UpdatePlatform.windows), isFalse);
@@ -234,7 +235,7 @@ void main() {
       final s = make();
       final r = await s.check(force: true);
       expect(r.newer, isTrue);
-      expect(r.release!.version, const SemVer(1, 1, 0));
+      expect(r.release!.version, SemVer(1, 1, 0));
       expect(s.assetFor(r.release!)!.name, 'ZapDL-1.1.0-android.apk');
       final same = await make(current: '1.1.0').check(force: true);
       expect(same.newer, isFalse);

@@ -13,6 +13,27 @@
 
 ZapDL does not bypass DRM, paywalls or login walls. You are responsible for respecting each site's terms and copyright.
 
+## Supported platforms (1.0.0)
+
+| Platform | How it is read | Depends on |
+|---|---|---|
+| YouTube (videos, Shorts) | `youtube_explode_dart` (25 s limit), then YouTube's player API as the Android VR app calls it (direct links, no signature) | YouTube; a working proxy/VPN where it is filtered |
+| TikTok | `https://www.tikwm.com/api/` (HD / no watermark / with watermark / sound / photo slideshows) | the third-party service tikwm.com |
+| X / Twitter | `https://api.fxtwitter.com/status/<id>` (videos, GIFs, photos) | the third-party FxTwitter API |
+| SoundCloud (single tracks) | the web player's own public API: finds the page's client id, asks `api-v2 /resolve`, then the progressive (MP3) stream | public, fully playable tracks only; playlists/sets, 30-second previews and Go+ tracks are not supported; the client id lookup may break when SoundCloud changes |
+| Instagram (reels, videos, photo posts) | the public embed page `/<p\|reel>/<code>/embed/captioned/` | public posts only; Instagram changes this often |
+| Telegram | public channel embed page (`t.me/<channel>/<id>`) | public channels only |
+| Reddit | the post's `.json` | Reddit |
+| Anything else | Open Graph tags (video/image the page declares) | the page |
+
+On desktop, if **yt-dlp** is installed (on PATH), it is tried first for every link: it supports far more sites and is updated by its own team.
+
+Be aware:
+- TikTok and X go through third-party services. If they are down, filtered or change their format, those links fail until ZapDL is updated.
+- **Spotify is not supported, on purpose.** Its audio is encrypted (DRM); the only ways to save it are ripping tools that break Spotify's terms and that we won't ship. ZapDL says so instead of failing silently.
+- Instagram private accounts, stories and anything that needs a login cannot be downloaded. A reel whose video can't be found reports "needs sign-in" instead of downloading just the cover picture.
+- Every lookup has a time limit (about 100 s in total), so a stalled network ends in an error message rather than an endless spinner.
+
 ## Filtered sites (YouTube and others blocked by a government)
 
 No downloader can unblock a site by itself. What ZapDL does:

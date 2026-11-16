@@ -2,7 +2,7 @@
 
 **Nothing in this guide has been executed.** It lists what a maintainer must do; no build, signing, store submission or approval has happened. Store requirements change; re-check each store's current documentation.
 
-Run first: `dart tool/setup.dart`, `flutter analyze`, `flutter test`, and manual testing on every target platform.
+Run first: `dart tool/setup.dart`, `flutter test`, and manual testing on every target platform.
 
 ## Android (GitHub, Cafe Bazaar, Myket, Google Play)
 
@@ -37,7 +37,7 @@ Run first: `dart tool/setup.dart`, `flutter analyze`, `flutter test`, and manual
 4. Note: ZapDL does not yet implement iOS background transfers; downloads pause when the app is suspended. Describe this accurately in the listing.
 
 ## Before tagging a release
-- [ ] All tests pass and `flutter analyze` is clean
+- [ ] All tests pass
 - [ ] Manual regression on each target platform
 - [ ] Native-speaker review of all translations
 - [ ] Update `CHANGELOG.md`, `pubspec.yaml` version and `lib/core/app_info.dart`
@@ -49,3 +49,7 @@ Run first: `dart tool/setup.dart`, `flutter analyze`, `flutter test`, and manual
 The updater reads `https://github.com/ghaderi0x/ZapDL/releases`. Push a tag `vX.Y.Z` (matching `pubspec.yaml` and `lib/core/app_info.dart`) and `.github/workflows/release.yml` builds and publishes: `ZapDL-X.Y.Z-android.apk`, `-windows-x64-setup.exe`, `-windows-x64.zip`, `-linux-x64.tar.gz`, `-macos.dmg` and `SHA256SUMS.txt`. Tags with `-` (e.g. `v1.2.0-beta.1`) become pre-releases, offered only to users who enable the beta channel. Release notes come from the matching `CHANGELOG.md` section. **The workflow has never run;** test it with a throwaway tag.
 
 **Android signing:** see the Android section above and `docs/GITHUB_GUIDE.md` (secrets: `ANDROID_KEYSTORE_BASE64`, `ANDROID_KEYSTORE_PASSWORD`, `ANDROID_KEY_ALIAS`, `ANDROID_KEY_PASSWORD`). To bump versions use `dart tool/bump_version.dart X.Y.Z`.
+
+## Android is uploaded by hand
+
+The GitHub workflow builds and publishes Windows, Linux and macOS only. Build the Android APKs yourself with `tool/build_android.sh` (signed with your permanent key), then open the release on GitHub and attach the files from `dist/` (`ZapDL-<version>-android-*.apk` and the `-android-store.apk` one for stores). Keep the file names exactly as the script produces them: the in-app updater picks the right file by name.

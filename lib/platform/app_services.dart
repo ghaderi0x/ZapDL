@@ -107,11 +107,17 @@ class AppServices with WidgetsBindingObserver {
     final t = texts();
     var active = 0;
     var speed = 0.0;
+    var got = 0;
+    var total = 0;
     for (final task in tasks) {
       final before = _last[task.id];
       if (task.status == DownloadStatus.downloading) {
         active++;
         speed += task.speedBps;
+        if (task.totalBytes > 0) {
+          got += task.receivedBytes;
+          total += task.totalBytes;
+        }
       }
       if (before != null && before != task.status) {
         if (task.status == DownloadStatus.completed) {
@@ -123,7 +129,7 @@ class AppServices with WidgetsBindingObserver {
       _last[task.id] = task.status;
     }
     _last.removeWhere((id, _) => !tasks.any((x) => x.id == id));
-    _updateBackground(active, speed, t);
+    _updateBackground(active, speed, t, total > 0 ? (got * 100 ~/ total).clamp(0, 100) : null);
   }
 
   void _notify(String id, String title, String body) {
@@ -131,7 +137,7 @@ class AppServices with WidgetsBindingObserver {
     notifier.show(id: id, title: title, body: body);
   }
 
-  void _updateBackground(int active, double speed, ServiceTexts t) {
+  void _updateBackground(int active, double speed, ServiceTexts t, int? progress) {
     if (active == 0) {
       if (_backgroundShown) {
         _backgroundShown = false;
@@ -145,7 +151,11 @@ class AppServices with WidgetsBindingObserver {
     }
     _lastBackgroundUpdate = now;
     _backgroundShown = true;
-    background.update(title: t.appName, text: t.ongoing(active, speed));
+    background.update(
+      title: t.appName,
+      text: t.ongoing(active, speed),
+      progress: progress,
+    );
   }
 
   @override

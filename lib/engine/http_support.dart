@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'errors.dart';
 import 'models.dart';
+import 'filter_bypass.dart';
 import 'system_proxy.dart';
 
 const defaultUserAgent = 'ZapDL/0.1';
@@ -121,9 +122,13 @@ HttpClient createHttpClient({
   switch (proxy.mode) {
     case ProxyMode.system:
       // OS proxy (Windows/macOS settings) first, then HTTP_PROXY / HTTPS_PROXY.
-      client.findProxy = SystemProxy.forUri;
+      client.findProxy = (uri) {
+        final system = SystemProxy.forUri(uri);
+        // With "filter bypass" on and no OS proxy, use the local bypass proxy.
+        return system == 'DIRECT' ? FilterBypass.forUri(uri) : system;
+      };
     case ProxyMode.none:
-      client.findProxy = (_) => 'DIRECT';
+      client.findProxy = FilterBypass.forUri;
     case ProxyMode.manual:
       if (!proxy.isManualValid) {
         throw const DownloadFailure(DownloadErrorCode.proxy);

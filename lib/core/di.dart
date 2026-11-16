@@ -8,6 +8,8 @@ import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../engine/engine.dart';
+import '../engine/filter_bypass.dart';
+import '../engine/models.dart';
 import '../engine/store.dart';
 import '../features/downloads/downloads_cubit.dart';
 import '../features/downloads/url_history.dart';
@@ -116,12 +118,52 @@ Future<void> configureDependencies() async {
     },
   );
 
+  engine.categoryRoot = settings.state.sortIntoFolders ? settings.state.downloadDir : null;
+
+  Future<void> applyBypass(SettingsState s) async {
+    final want = s.filterBypass && s.proxyMode != ProxyMode.manual;
+    try {
+      if (want) {
+        await FilterBypass.start();
+      } else {
+        await FilterBypass.stop();
+      }
+    } catch (e) {
+      logger.info('filter bypass: $e');
+    }
+  }
+
+  await applyBypass(settings.state);
+
   // The proxy applies to media lookups and update checks as well as downloads.
   settings.stream.listen((s) {
+    engine.categoryRoot = s.sortIntoFolders ? s.downloadDir : null;
     resolver.proxy = s.proxy;
+    unawaited(applyBypass(s));
     updateService.proxy = s.proxy;
     if (TrayService.supported) tray.refreshMenu();
   });
+
+  // Tray menu/tooltip: "N active · speed" while downloading (throttled).
+  if (TrayService.supported) {
+    var lastTrayUpdate = DateTime.fromMillisecondsSinceEpoch(0);
+    engine.updates.listen((tasks) {
+      final now = DateTime.now();
+      if (now.difference(lastTrayUpdate) < const Duration(seconds: 2)) return;
+      lastTrayUpdate = now;
+      var active = 0;
+      var speed = 0.0;
+      for (final t in tasks) {
+        if (t.status == DownloadStatus.downloading) {
+          active++;
+          speed += t.speedBps;
+        }
+      }
+      final l = _l10n(settings);
+      final code = settings.state.languageCode ?? PlatformDispatcher.instance.locale.languageCode;
+      unawaited(tray.setStatus(active == 0 ? null : l.notifOngoing(active, formatSpeed(speed, code))));
+    });
+  }
 
   getIt
     ..registerSingleton<AppLogger>(logger)

@@ -7,10 +7,19 @@ All notable changes are documented here. Format follows [Keep a Changelog](https
 ## [1.0.0] - 2026-11-14
 
 ### Added
+- SoundCloud track downloads (MP3). Spotify shows a clear "DRM-protected, not supported" message.
 - Theme picker with four named themes (Forest, Sunset, Ocean, Glacier), each with Auto / Light / Dark mode.
+- Default save folder is now `Downloads/ZapFiles` (existing users who saved into plain Downloads are moved to it).
+- Downloads are sorted into `Videos`, `Music`, `Images`, `Documents`, `Archives`, `Programs` and `Other` inside ZapFiles (Settings → Downloads can turn it off; a folder you pick in the add dialog is always used as is).
+- Click a finished file's name to open it.
+- TikTok, X/Twitter and Instagram (reels and videos, not just the cover) downloads; YouTube has a second path and time limits so the dialog never loads forever.
 - Link groups: add several links at once and download them one after another in order; optional "auto-detect next part" (part1 -> part2 ...).
 - Files deleted from disk are marked as deleted in the list.
 - Hover highlights on desktop.
+- One-tap dark/light button; snackbars are dark in dark mode.
+- Download status in the Windows tray (menu + tooltip) and a progress bar in the Android notification.
+- Single instance on desktop: opening ZapDL again shows the running window instead of starting another process.
+- **Reach filtered sites without a VPN** (Settings, off by default): encrypted DNS (DoH) plus splitting of the TLS handshake through a local 127.0.0.1 proxy, for sites filtered by name (often Instagram, YouTube). Experimental; cannot beat IP-address blocks (many Telegram servers) and depends on the ISP.
 - System proxy support (Windows/macOS); YouTube lookups now use the same proxy as downloads.
 
 ### Fixed

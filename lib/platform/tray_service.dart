@@ -28,6 +28,10 @@ class TrayService with TrayListener, WindowListener {
   TrayLabels Function() labels;
   bool _started = false;
 
+  /// Current download status line (null when idle), shown in the tray menu
+  /// and tooltip.
+  String? _status;
+
   static bool get supported => Platform.isWindows || Platform.isLinux || Platform.isMacOS;
 
   Future<void> start() async {
@@ -54,13 +58,25 @@ class TrayService with TrayListener, WindowListener {
     if (!_started && !supported) return;
     try {
       final l = labels();
-      await trayManager.setToolTip(l.tooltip);
+      final status = _status;
+      await trayManager.setToolTip(status == null ? l.tooltip : '${l.tooltip}\n$status');
       await trayManager.setContextMenu(Menu(items: [
+        if (status != null) ...[
+          MenuItem(key: 'status', label: status, disabled: true),
+          MenuItem.separator(),
+        ],
         MenuItem(key: 'show', label: l.show),
         MenuItem.separator(),
         MenuItem(key: 'quit', label: l.quit),
       ]));
     } catch (_) {}
+  }
+
+  /// Updates the "downloading" line. Cheap no-op when the text is unchanged.
+  Future<void> setStatus(String? text) async {
+    if (text == _status) return;
+    _status = text;
+    await refreshMenu();
   }
 
   Future<void> showWindow() async {

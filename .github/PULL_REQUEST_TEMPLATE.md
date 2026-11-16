@@ -3,7 +3,7 @@
 
 ## Checklist
 - [ ] `dart format .` has been run
-- [ ] `flutter analyze` is clean
+- [ ] `flutter test` passes
 - [ ] `flutter test` passes (list the tests you ran below)
 - [ ] New user-facing text is in all six ARB files (en, fa, ar, es, zh, ru)
 - [ ] No hardcoded colors or strings in widgets

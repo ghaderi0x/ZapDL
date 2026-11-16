@@ -212,7 +212,7 @@
   "gateSuspended": "应用在后台时已暂停，返回后将继续。",
   "mediaErrBlocked": "网站拒绝或限制了请求，请稍后再试。",
   "mediaErrLogin": "此内容不公开或需要登录。",
-  "mediaErrNetwork": "无法访问该网站。",
+  "mediaErrNetwork": "无法连接到该网站。如果在你所在地区被屏蔽，请开启 VPN 或在“设置 > 网络”中设置代理。",
   "mediaErrNotFound": "此链接中未找到可下载的媒体。",
   "mediaErrParse": "无法解析网站的响应，网站可能已更改。",
   "mediaErrUnsupported": "此页面没有 ZapDL 可下载的媒体。",
@@ -343,5 +343,11 @@
   "addAutoNextSuggest": "这看起来是多分卷文件的一部分。是否自动下载后续分卷？",
   "statusFileDeleted": "文件已删除",
   "fileDeletedHint": "该文件已从你的设备中删除。",
-  "actionRedownload": "重新下载"
+  "actionRedownload": "重新下载",
+  "settingsSortFolders": "按类型分类到文件夹",
+  "settingsSortFoldersHelp": "视频、音乐、图片、文档、压缩包和程序会分别放入下载文件夹内的独立文件夹。",
+  "filterBypassTitle": "无需 VPN 访问被过滤的网站",
+  "filterBypassDesc": "使用加密 DNS 并拆分连接开头，使按域名过滤的系统可能无法识别。默认关闭。",
+  "filterBypassNote": "这不是 VPN：它不会对运营商隐藏任何内容，无法绕过按 IP 地址的封锁（如部分 Telegram 服务器），且仅对部分运营商有效。可以试用，无效请关闭。",
+  "mediaErrDrm": "Spotify 的音频流经过加密（DRM），ZapDL 无法从 Spotify 下载。请改用 SoundCloud、YouTube 或您自己的文件。"
 }

@@ -67,7 +67,7 @@ class SettingsPage extends StatelessWidget {
                 Text(l.language, style: Theme.of(context).textTheme.labelLarge),
                 const SizedBox(height: 8),
                 DropdownButtonFormField<String?>(
-                  initialValue: s.languageCode,
+                  value: s.languageCode,
                   items: [
                     DropdownMenuItem(value: null, child: Text(l.languageSystem)),
                     for (final code in supportedLanguageCodes)
@@ -106,6 +106,13 @@ class SettingsPage extends StatelessWidget {
                       child: Text(l.actionChange),
                     ),
                 ]),
+                SwitchListTile(
+                  contentPadding: EdgeInsets.zero,
+                  value: s.sortIntoFolders,
+                  onChanged: cubit.setSortIntoFolders,
+                  title: Text(l.settingsSortFolders),
+                  subtitle: Text(l.settingsSortFoldersHelp),
+                ),
                 const SizedBox(height: 8),
                 _SliderRow(
                   label: l.maxConcurrent,
@@ -125,7 +132,7 @@ class SettingsPage extends StatelessWidget {
                 Text(l.speedLimitPer, style: Theme.of(context).textTheme.labelLarge),
                 const SizedBox(height: 8),
                 DropdownButtonFormField<int>(
-                  initialValue: _speedLimitOptionsKb.contains(s.speedLimitKb) ? s.speedLimitKb : 0,
+                  value: _speedLimitOptionsKb.contains(s.speedLimitKb) ? s.speedLimitKb : 0,
                   items: [
                     for (final kb in _speedLimitOptionsKb)
                       DropdownMenuItem(
@@ -143,6 +150,8 @@ class SettingsPage extends StatelessWidget {
             const SizedBox(height: 16),
             const ScheduleSection(),
             const SizedBox(height: 16),
+            const FilterBypassSection(),
+            const SizedBox(height: 12),
             const BackgroundSection(),
             const SizedBox(height: 16),
             const UpdatesSection(),

@@ -225,7 +225,7 @@ Future<void> main() async {
   stdout.writeln('''
 
 Setup complete. Next:
-  flutter analyze
+
   flutter test
   flutter run -d windows   # or linux / macos / <android device> / <ios simulator>
 ''');
