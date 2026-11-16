@@ -1,0 +1,20 @@
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+pubspec.lock
+lib/l10n/gen/
+*.iml
+.idea/
+.vscode/
+.DS_Store
+
+# Secrets and release output: NEVER commit these
+*.jks
+*.keystore
+key.properties
+dist/
+android/local.properties
