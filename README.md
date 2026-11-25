@@ -1,322 +1,269 @@
-<div align="center">
+<p align="center">
+  <img src="assets/branding/readme-banner.svg" alt="ZapDL: Download at the Speed of Zap" width="100%">
+</p>
 
-  <img src="assets/branding/banner.png" alt="ZapDL" width="100%">
+<p align="center">
+  <a href="https://github.com/ghaderi0x/ZapDL/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/ghaderi0x/ZapDL?style=for-the-badge&label=Latest&color=3478F6&labelColor=0A1330"></a>
+  <a href="https://github.com/ghaderi0x/ZapDL/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/ghaderi0x/ZapDL?style=for-the-badge&color=2DD4FF&labelColor=0A1330"></a>
+  <a href="LICENSE"><img alt="MIT licence" src="https://img.shields.io/github/license/ghaderi0x/ZapDL?style=for-the-badge&color=C3F060&labelColor=0A1330"></a>
+  <img alt="Platforms" src="https://img.shields.io/badge/Windows%20%C2%B7%20Linux%20%C2%B7%20macOS%20%C2%B7%20Android-3478F6?style=for-the-badge&labelColor=0A1330">
+</p>
 
-  <br>
-
-  <h1>ZapDL</h1>
-  <h3>Your downloads. One place. Zero hassle.</h3>
-
-  <p>
-    A modern, free and open-source download manager for
-    <strong>Windows · Linux · macOS · Android</strong>
-  </p>
-
-  <p>
-    Download files faster, save media from supported platforms, and pick up right where you left off.
-    Simple enough for everyday use. Powerful enough for your download workflow.
-  </p>
-
-  <br>
-
-  <a href="https://github.com/ghaderi0x/ZapDL/releases/latest">
-    <img src="https://img.shields.io/badge/↓%20DOWNLOAD%20ZAPDL-3478F6?style=for-the-badge&logoColor=white" alt="Download ZapDL">
-  </a>
+<p align="center">
+  <a href="https://github.com/ghaderi0x/ZapDL/releases/latest"><img alt="Download ZapDL" src="https://img.shields.io/badge/%E2%86%93%20DOWNLOAD%20ZAPDL-3478F6?style=for-the-badge&logoColor=white"></a>
   &nbsp;
-  <a href="https://github.com/ghaderi0x/ZapDL">
-    <img src="https://img.shields.io/badge/EXPLORE%20ON%20GITHUB-171717?style=for-the-badge&logo=github&logoColor=white" alt="Explore ZapDL on GitHub">
-  </a>
+  <a href="https://github.com/ghaderi0x/ZapDL/issues/new/choose"><img alt="Get help" src="https://img.shields.io/badge/GET%20HELP-171717?style=for-the-badge&logo=github&logoColor=white"></a>
+</p>
 
-  <br><br>
+<p align="center">
+  <b>English</b> · <a href="README.fa.md">فارسی</a>
+  &nbsp;|&nbsp;
+  <a href="#-download">Download</a> ·
+  <a href="#-features">Features</a> ·
+  <a href="#-get-started">Get started</a> ·
+  <a href="#-faq">FAQ</a> ·
+  <a href="#-build-from-source">Build</a> ·
+  <a href="docs/DEVELOPERS.md">Developer guide</a> ·
+  <a href="CHANGELOG.md">Changelog</a>
+</p>
 
-  <a href="README.fa.md">🇮🇷 فارسی</a>
-  &nbsp;·&nbsp;
-  <a href="docs/DEVELOPERS.md">Developer Guide</a>
-  &nbsp;·&nbsp;
-  <a href="https://github.com/ghaderi0x/ZapDL/issues/new/choose">Get Help</a>
-
-  <br><br>
-
-  <img src="https://img.shields.io/github/v/release/ghaderi0x/ZapDL?label=Latest%20release&color=3478F6&style=flat-square" alt="Latest release">
-  <img src="https://img.shields.io/github/license/ghaderi0x/ZapDL?color=3478F6&style=flat-square" alt="License">
-  <img src="https://img.shields.io/badge/Platforms-4-3478F6?style=flat-square" alt="Four platforms">
-  <img src="https://img.shields.io/badge/Free%20%26%20Open%20Source-Yes-3478F6?style=flat-square" alt="Free and open source">
-
-</div>
-
-<br>
-
-<div align="center">
-
-  <img src="docs/demo.gif" alt="ZapDL application preview" width="92%">
-
-  <p><sub>A closer look at downloading with ZapDL.</sub></p>
-
-</div>
+<p align="center">
+  <img src="docs/demo.gif" alt="ZapDL demo" width="860">
+  <br>
+  <sub>A closer look at downloading with ZapDL.</sub>
+</p>
 
 ---
 
 ## Meet your new download manager
 
-Downloading should be easy. Whether you're saving a document, grabbing a large file, or keeping a video for later, ZapDL brings your downloads together in one clean, straightforward app.
+Downloading should be easy. Whether you are saving a document, grabbing a large file or keeping a video for later, **ZapDL** brings your downloads together in one clean app: free, open source, with no account and no ads.
 
-| <img src="https://img.shields.io/badge/01-3478F6?style=flat-square" alt="01"> **Speed up downloads** | <img src="https://img.shields.io/badge/02-3478F6?style=flat-square" alt="02"> **Pause & resume** |
-|:---|:---|
-| Download files in multiple parts at the same time whenever the server supports it. | Stop a download and continue later — even after closing and reopening ZapDL. |
-| <img src="https://img.shields.io/badge/03-3478F6?style=flat-square" alt="03"> **Save online media** | <img src="https://img.shields.io/badge/04-3478F6?style=flat-square" alt="04"> **Stay organized** |
-|:---|:---|
-| Paste links from supported platforms and choose from the available quality options. | Automatically sort your downloads into clear categories and find files when you need them. |
+|  |  |
+|:--|:--|
+| ⚡ **Faster downloads**<br>Files are fetched in several parts at once, whenever the server allows it. | ⏯️ **Pause and resume**<br>Stop now, continue later, even after you close and reopen ZapDL. |
+| 🎬 **Save online media**<br>Paste a link from a supported site and pick from the available qualities. | 🗂️ **Stay organised**<br>Downloads are sorted into clear categories, in one folder. |
+| 🌍 **Six languages**<br>English, فارسی, العربية, Español, 中文 and Русский, with right-to-left layout. | 🔐 **Private by design**<br>No account, no ads, no tracking, no analytics. |
 
-## Everything you need. Nothing you don't.
+## ✨ Features
 
 ### ⚡ Downloads that keep moving
+- Multi-connection downloads when the server supports them.
+- Pause and resume at any time.
+- Interrupted downloads continue after you restart the app.
+- Detects that a remote file has changed before resuming, instead of saving a damaged file.
 
-- Multi-connection downloads when supported by the server.
-- Pause and resume whenever you need.
-- Continue interrupted downloads after restarting the app.
-- Detects when a remote file has changed before resuming.
+### 🌍 Your favourite content, within reach
+Paste links from supported services:
 
-### 🌍 Your favorite content, within reach
+<p align="center">
+  <b>YouTube</b> &nbsp;·&nbsp; <b>TikTok</b> &nbsp;·&nbsp; <b>Instagram</b> &nbsp;·&nbsp; <b>X / Twitter</b> &nbsp;·&nbsp; <b>Telegram</b> &nbsp;·&nbsp; <b>Reddit</b> &nbsp;·&nbsp; <b>SoundCloud</b>
+</p>
 
-Paste links from supported services, including:
+Regular files work too: any HTTP or HTTPS link.
 
-<div align="center">
-
-**YouTube** &nbsp;·&nbsp; **TikTok** &nbsp;·&nbsp; **Instagram** &nbsp;·&nbsp; **X / Twitter** &nbsp;·&nbsp; **Telegram** &nbsp;·&nbsp; **Reddit** &nbsp;·&nbsp; **SoundCloud**
-
-</div>
-
-You can also download regular files directly from HTTP and HTTPS links.
-
-<sub>Supported links and available quality options depend on the source website. Not every link or media item is downloadable.</sub>
+<sub>Supported links and available qualities depend on the source site. Not every link or media item can be downloaded. Spotify is not supported because its audio is encrypted.</sub>
 
 ### 🧩 Multi-part downloads, made simple
-
-Large games and archives often come in several parts. ZapDL helps you handle them together.
-
-- Add multiple part links as one group.
-- Download parts one after another, in order.
-- Enable **Auto-download next parts** to automatically look for the next numbered part.
+Large games and archives often come in several parts. Add the part links as one **group** and ZapDL downloads them one after another, in order. Turn on **Auto-download next parts** and it looks for the next numbered part by itself.
 
 ### 🗂️ A place for every download
+Everything goes into `Downloads/ZapFiles`, sorted into:
 
-ZapDL keeps your files organized in:
+<p align="center">
+  <code>Videos</code> · <code>Music</code> · <code>Images</code> · <code>Documents</code> · <code>Archives</code> · <code>Programs</code>
+</p>
 
-`Downloads/ZapFiles`
+Click a finished file's name to open it. If you delete a file from disk, ZapDL marks it as deleted and lets you download it again.
 
-Your downloads are sorted into:
-
-`Videos` · `Music` · `Images` · `Documents` · `Archives` · `Programs`
-
-Open files directly from the download list. If a downloaded file is no longer there, ZapDL shows its status and lets you download it again.
-
-### 🕒 Your time. Your rules.
-
-- Schedule downloads for a time that works for you.
-- Restrict downloads to selected hours.
-- Use **Wi-Fi only** to avoid consuming mobile data.
-- Track progress through Android notifications or the Windows system tray.
+### 🕒 Your time, your rules
+- **Schedule** downloads for a time that suits you, or limit them to selected hours.
+- **Wi-Fi only** protects your mobile data.
+- Follow progress in Android notifications or the Windows system tray.
 
 ### 🎨 A look that feels like yours
+<p align="center">
+  <img alt="Forest" src="https://img.shields.io/badge/Forest-%E2%80%83%E2%80%83%E2%80%83%E2%80%83-C3F060?style=for-the-badge&labelColor=1F5A2C">
+  <img alt="Sunset" src="https://img.shields.io/badge/Sunset-%E2%80%83%E2%80%83%E2%80%83%E2%80%83-F09C5A?style=for-the-badge&labelColor=6B2A1B">
+  <img alt="Ocean" src="https://img.shields.io/badge/Ocean-%E2%80%83%E2%80%83%E2%80%83%E2%80%83-6CC8F8?style=for-the-badge&labelColor=123A8C">
+  <img alt="Glacier" src="https://img.shields.io/badge/Glacier-%E2%80%83%E2%80%83%E2%80%83%E2%80%83-DCE6FF?style=for-the-badge&labelColor=34436E">
+</p>
 
-- Four themes: **Forest, Sunset, Ocean and Glacier**.
-- Light and dark appearances for every theme.
-- Six languages: **English, فارسی, العربية, Español, 中文 and Русский**.
-- Right-to-left interface support for Persian and Arabic.
+- Four themes, each with light and dark appearances, or pick your own accent colour.
+- Six languages, with right-to-left layout for Persian and Arabic.
+- Adapts to phone, tablet and desktop.
 
 ### 🔐 Private by design
+- No account. No ads. No tracking or analytics.
+- Cookies and proxy passwords are kept in your system's secure storage.
+- Open source under the MIT licence.
 
-- No account.
-- No ads.
-- No tracking or analytics.
-- Cookies and proxy passwords are stored using your system's secure storage.
-- Open source and released under the MIT License.
-
-ZapDL connects to the websites involved in your downloads and to GitHub for update checks. More details are available in the [FAQ](#privacy--safety).
+ZapDL connects only to the sites involved in your downloads and to GitHub for update checks. See the [FAQ](#-faq).
 
 ---
 
-## Get ZapDL
+## 📦 Download
 
-<div align="center">
+Get the latest build from **[GitHub Releases](https://github.com/ghaderi0x/ZapDL/releases/latest)**.
 
-  <h3>Ready to take control of your downloads?</h3>
-  <p>Choose your device and get the latest release.</p>
-
-  <a href="https://github.com/ghaderi0x/ZapDL/releases/latest">
-    <img src="https://img.shields.io/badge/DOWNLOAD%20THE%20LATEST%20VERSION-3478F6?style=for-the-badge&logo=github&logoColor=white" alt="Download the latest version">
-  </a>
-
-</div>
-
-<br>
-
-| Platform | Package | How to install |
-|:---|:---|:---|
-| 🪟 **Windows** | `ZapDL-…-windows-x64-setup.exe` | Run the installer. No administrator rights required. For a portable copy, download the `.zip`, extract it and run `zapdl.exe`. |
-| 🤖 **Android** | `ZapDL-…-android.apk` | Open the APK. If prompted, allow your browser or file manager to install unknown apps. |
-| 🐧 **Linux — Debian / Ubuntu / Mint** | `ZapDL-…-linux-amd64.deb` | Run `sudo apt install ./ZapDL-*-linux-amd64.deb`. |
-| 🐧 **Linux — other distributions** | `ZapDL-…-linux-x64.tar.gz` | Extract the archive and run the `zapdl` executable. |
-| 🍎 **macOS** | `ZapDL-…-macos.dmg` | Open the DMG and drag ZapDL into Applications. On first launch, you may need to right-click and choose **Open**. |
+| Platform | File | How to install |
+|:--|:--|:--|
+| 🪟 **Windows** | `ZapDL-…-windows-x64-setup.exe` | Run the installer. No administrator rights needed. For a portable copy, extract the `.zip` and run `zapdl.exe`. |
+| 🤖 **Android** | `ZapDL-…-android.apk` | Open the APK. If asked, allow your browser or file manager to install unknown apps. |
+| 🐧 **Debian / Ubuntu / Mint** | `ZapDL-…-linux-amd64.deb` | `sudo apt install ./ZapDL-*-linux-amd64.deb` |
+| 🐧 **Other Linux** | `ZapDL-…-linux-x64.tar.gz` | Extract it and run the `zapdl` executable. |
+| 🍎 **macOS** | `ZapDL-…-macos.dmg` | Open the DMG and drag ZapDL into Applications. On first launch, right-click and choose **Open**. |
 
 <details>
-  <summary><strong>Important installation notes</strong></summary>
+<summary><b>Important notes</b></summary>
 
-  - ZapDL is a new project (version 1.0). Windows is currently the most tested platform. Android, Linux and macOS have received less testing. Please [report any issues](https://github.com/ghaderi0x/ZapDL/issues/new/choose).
-  - Windows or macOS may display an unknown-publisher or unidentified-developer warning. ZapDL is not code-signed yet, so this is expected.
-  - Spotify is not supported because its audio is encrypted.
+- ZapDL is a new project (version 1.0). Windows is the most tested platform; Android, Linux and macOS have had less testing. Please [report any issue](https://github.com/ghaderi0x/ZapDL/issues/new/choose).
+- ZapDL is not code-signed yet, so Windows or macOS may warn about an unknown publisher. This is expected.
+- ZapDL checks GitHub for new versions and can update itself. You can verify a download against `SHA256SUMS.txt` on the release page.
 </details>
 
 ---
 
-## Get started in seconds
+## 🚀 Get started
 
-**1 — Add a download**
+**1. Add a download.** Press **+** (or <kbd>Ctrl</kbd>+<kbd>N</kbd>, <kbd>Cmd</kbd>+<kbd>N</kbd> on macOS) and paste a link. On desktop you can also drag a URL, or a `.txt` file full of links, into the window. On Android, use **Share → ZapDL** from any app.
 
-Press **+** (or `Ctrl + N`) and paste a link. ZapDL will show the available file information.
+**2. Choose your options.** Pick the destination folder and, for media, your preferred quality.
 
-- On desktop, drag a URL or a `.txt` file containing links into the app.
-- On Android, use **Share → ZapDL** from another app.
+**3. Press Add.** Watch the progress in your downloads list.
 
-**2 — Choose your options**
-
-Select the destination folder and, for supported media, your preferred quality.
-
-**3 — Start downloading**
-
-Press **Add** and watch the progress in your downloads list.
-
-**4 — Manage it your way**
-
-Select a download to see its details. Use the right-click menu or the **⋮** menu to pause, open, copy the link or delete it.
+**4. Manage it.** Select a download to see its details. Use the right-click menu or the **⋮** menu to pause, open, copy the link or delete it.
 
 <details>
-  <summary><strong>How do I download a multi-part file?</strong></summary>
+<summary><b>How do I download a multi-part file?</b></summary>
 
-  1. Open the add-download window.
-  2. Select **Group of links**.
-  3. Paste one link per line, in the correct order.
-  4. Optionally enable **Auto-download next parts**.
+1. Open the add-download window.
+2. Choose **Group of links**.
+3. Paste one link per line, in the right order.
+4. Optionally turn on **Auto-download next parts**.
 
-  ZapDL will download each part in sequence.
+ZapDL downloads each part in turn.
 </details>
 
 ---
 
-## Frequently asked questions
+## ❓ FAQ
 
 <details>
-  <summary><strong>A website is blocked in my country. What can I do?</strong></summary>
+<summary><b>A website is blocked in my country. What can I do?</b></summary>
 
-  You can try the following:
-
-  1. **Settings → Reach filtered sites without a VPN.** This experimental option uses encrypted DNS and splits the beginning of secure connections. It may work with some filters, but it is not a VPN and does not work with every provider. It cannot help with IP-based blocking, which is common for Telegram.
-  2. **Use your own VPN or proxy.** If your VPN configures the system proxy, leave **Settings → Network → Proxy** set to **System**. Otherwise, choose **Manual** and enter your HTTP proxy port (for example, `127.0.0.1:10809`). SOCKS-only ports are not supported.
+1. **Settings → Reach filtered sites without a VPN.** This experimental option uses encrypted DNS and splits the start of secure connections. It may work with some filters, but it is not a VPN and does not work with every provider. It cannot help with IP-based blocking, which is common for Telegram.
+2. **Use your own VPN or proxy.** If your VPN sets the system proxy, leave **Settings → Network → Proxy** on **System**. Otherwise choose **Manual** and enter your HTTP proxy port (for example `127.0.0.1:10809`). SOCKS-only ports are not supported.
 </details>
 
 <details>
-  <summary><strong>Can I download music from Spotify?</strong></summary>
+<summary><b>Can I download music from Spotify?</b></summary>
 
-  No. Spotify audio is encrypted, so ZapDL cannot download it. SoundCloud and YouTube are supported where the source makes the media available.
+No. Spotify audio is encrypted, so ZapDL cannot download it. SoundCloud and YouTube are supported where the source makes the media available.
 </details>
 
 <details>
-  <summary><strong>Why can't I choose 1080p on YouTube?</strong></summary>
+<summary><b>Why can't I choose 1080p on YouTube?</b></summary>
 
-  YouTube may provide high-resolution video and audio as separate files that need to be combined using a tool such as FFmpeg. ZapDL does not bundle FFmpeg, so ready-made downloads are usually available up to 720p, or as audio only.
-
-  On desktop, installing [yt-dlp](https://github.com/yt-dlp/yt-dlp) allows ZapDL to use it first and may provide more format options.
+YouTube may offer high-resolution video and audio as separate files that must be combined with a tool such as FFmpeg. ZapDL does not bundle FFmpeg, so ready-made downloads are usually available up to 720p, or as audio only. On desktop, installing [yt-dlp](https://github.com/yt-dlp/yt-dlp) lets ZapDL use it first and may offer more formats.
 </details>
 
 <details>
-  <summary><strong>Why does it say “Waiting for an allowed connection”?</strong></summary>
+<summary><b>Why does it say "Waiting for an allowed connection"?</b></summary>
 
-  Your device may be offline, or **Wi-Fi only** may be enabled while you're using mobile data. Connect to Wi-Fi or disable **Settings → Network → Wi-Fi only**.
+Your device may be offline, or **Wi-Fi only** may be on while you use mobile data. Connect to Wi-Fi or turn off **Settings → Network → Wi-Fi only**.
 </details>
 
 <details>
-  <summary><strong>Android says the update cannot be installed. What should I do?</strong></summary>
+<summary><b>Android says the update cannot be installed.</b></summary>
 
-  Android only allows an app to be updated with a package signed using the same signing key. If your installed copy came from another source, uninstall it once and install the APK from the official [Releases page](https://github.com/ghaderi0x/ZapDL/releases/latest).
+Android only updates an app with a package signed by the same key. If your installed copy came from another source, uninstall it once and install the APK from the official [Releases page](https://github.com/ghaderi0x/ZapDL/releases/latest).
 </details>
 
 <details>
-  <summary><strong>Does ZapDL support torrents, FTP or SOCKS proxies?</strong></summary>
+<summary><b>Does ZapDL support torrents, FTP or SOCKS proxies?</b></summary>
 
-  Not currently. ZapDL supports HTTP and HTTPS downloads and HTTP proxies. Torrents, FTP and SOCKS-only proxies are not supported.
+Not currently. ZapDL supports HTTP and HTTPS downloads and HTTP proxies.
 </details>
 
 <details>
-  <summary><strong>Is ZapDL safe? What information does it send?</strong></summary>
+<summary><b>Is ZapDL safe? What does it send?</b></summary>
 
-  ZapDL does not require an account and does not include ads or analytics. It connects to:
+ZapDL needs no account and has no ads or analytics. It connects to:
 
-  - The websites you choose to download from.
-  - GitHub, to check for updates.
-  - The page associated with a media link you paste, when needed to retrieve available media information.
+- the sites you choose to download from;
+- GitHub, to check for updates;
+- the page of a media link you paste, when needed to find the available media.
 
-  Cookies and proxy passwords are stored using your system's secure storage. ZapDL does not bypass paywalls, account logins or encryption. Always follow the rules of the websites you use and the copyright laws that apply in your country.
+Cookies and proxy passwords are kept in your system's secure storage. ZapDL does not bypass paywalls, logins or encryption. Please follow the rules of the sites you use and the copyright laws of your country.
 </details>
 
 ---
 
-## For developers
+## 🛠 Build from source
 
-<div align="center">
+You need the [Flutter SDK](https://docs.flutter.dev/get-started/install) (3.27 or newer).
 
-  <h2>Built in the open. Ready to be explored.</h2>
+```bash
+git clone https://github.com/ghaderi0x/ZapDL.git
+cd ZapDL
 
-  <p>
-    Curious about the code, architecture or how to contribute?
-    ZapDL is open source — and developers are welcome.
-  </p>
+dart tool/setup.dart        # creates and patches the platform folders, gets packages, generates translations
+flutter analyze
+flutter test
+flutter run -d windows      # or: linux, macos, or an Android device
+```
 
-  <a href="docs/DEVELOPERS.md">
-    <img src="https://img.shields.io/badge/READ%20THE%20DEVELOPER%20GUIDE-3478F6?style=for-the-badge&logo=github&logoColor=white" alt="Read the developer guide">
-  </a>
-  &nbsp;
-  <a href="https://github.com/ghaderi0x/ZapDL">
-    <img src="https://img.shields.io/badge/BROWSE%20SOURCE%20CODE-171717?style=for-the-badge&logo=github&logoColor=white" alt="Browse source code">
-  </a>
+Linux needs a few system packages and Android needs a signing key for release builds: see [`docs/PLATFORM_NOTES.md`](docs/PLATFORM_NOTES.md) and [`docs/RELEASE.md`](docs/RELEASE.md).
 
-</div>
+**Releasing:** `dart tool/bump_version.dart X.Y.Z`, commit, tag `vX.Y.Z` and push. The release workflow builds the Windows installer and zip, the Linux `.deb` and `.tar.gz` and the macOS `.dmg`, then publishes them with `SHA256SUMS.txt`. Keep the file names as they are, because the in-app updater picks files by name.
 
-Whether you want to explore the implementation, improve a translation, report a bug or contribute a feature, start with the [Developer Guide](docs/DEVELOPERS.md).
+## 🧱 Project layout
 
-**Just here to download files?** You can safely skip this section and [get ZapDL](https://github.com/ghaderi0x/ZapDL/releases/latest).
+```
+lib/
+  engine/      download engine: probe, segments, resume, queue, store (pure Dart)
+  media/       link resolver and site adapters (YouTube, TikTok, Instagram, X, ...)
+  platform/    notifications, tray, share intake, background service, network policy
+  update/      GitHub release check, asset choice, installer launch
+  features/    downloads, settings, onboarding, stats, shell
+  core/        theme, fonts, DI, helpers
+  l10n/        English, Persian, Arabic, Spanish, Chinese and Russian strings
+test/          engine, media, update, platform and widget tests
+installer/     Windows installer script
+tool/          setup, version bump, Android templates
+docs/          architecture, design spec, developer guide, release notes
+```
 
----
+## 📚 Documentation
 
-## Help make ZapDL better
+[Developer guide](docs/DEVELOPERS.md) · [Architecture](docs/ARCHITECTURE.md) · [Design spec](docs/DESIGN_SPEC.md) · [Media sources](docs/MEDIA_SOURCES.md) · [Platform notes](docs/PLATFORM_NOTES.md) · [Release guide](docs/RELEASE.md) · [Checklist](docs/CHECKLIST.md) · [Changelog](CHANGELOG.md)
 
-Feedback, ideas and contributions are always welcome.
+## ⚠️ Known limits
 
-| Have something to share? | Where to go |
-|:---|:---|
-| Found a bug? | [Report an issue](https://github.com/ghaderi0x/ZapDL/issues/new/choose) |
-| Have a feature idea? | [Open an issue](https://github.com/ghaderi0x/ZapDL/issues) |
-| Want to improve a translation? | [Contribute on GitHub](https://github.com/ghaderi0x/ZapDL) |
-| Want to contribute code? | [Read the Developer Guide](docs/DEVELOPERS.md) |
+- No torrents, FTP or SOCKS-only proxies.
+- No DRM bypass, so Spotify and other encrypted audio are out of scope.
+- Without FFmpeg, YouTube downloads are usually limited to 720p or audio only.
+- Media sites change often, so a source can stop working until ZapDL is updated.
+- Windows and macOS builds are not code-signed yet.
 
-## License
+## 🤝 Contributing
 
-ZapDL is licensed under the [MIT License](LICENSE).
+Bug reports, ideas, translations and code are welcome.
 
-Bundled fonts — Vazirmatn, Inter and Noto Sans SC — are distributed under the SIL Open Font License. See `assets/fonts/LICENSES.txt` for details.
+| I want to… | Go to |
+|:--|:--|
+| Report a bug | [Open an issue](https://github.com/ghaderi0x/ZapDL/issues/new/choose) |
+| Suggest a feature | [Open an issue](https://github.com/ghaderi0x/ZapDL/issues) |
+| Improve a translation | Edit the files in `lib/l10n/` and open a pull request |
+| Contribute code | Read [`CONTRIBUTING.md`](CONTRIBUTING.md) and the [developer guide](docs/DEVELOPERS.md) |
 
----
+## 📄 Licence
 
-<div align="center">ص
+ZapDL is released under the [MIT Licence](LICENSE). The bundled fonts (Vazirmatn, Inter and Noto Sans SC) are under the SIL Open Font License; see `assets/fonts/LICENSES.txt`.
 
-  <h3>Enjoying ZapDL?</h3>
-  <p>If ZapDL makes downloading easier, consider giving the project a star on GitHub. It helps more people discover it.</p>
-
-  <a href="https://github.com/ghaderi0x/ZapDL">
-    <img src="https://img.shields.io/badge/⭐%20STAR%20ZAPDL%20ON%20GITHUB-3478F6?style=for-the-badge&logo=github&logoColor=white" alt="Star ZapDL on GitHub">
-  </a>
-
+<p align="center">
+  <a href="https://github.com/ghaderi0x/ZapDL"><img alt="Star ZapDL on GitHub" src="https://img.shields.io/badge/%E2%AD%90%20STAR%20ZAPDL%20ON%20GITHUB-3478F6?style=for-the-badge&logo=github&logoColor=white"></a>
   <br><br>
-
-  <sub>ZapDL — Your downloads, under control.</sub>
-
-</div>
+  <sub>Made by <a href="https://github.com/ghaderi0x"><b>A.M Ghaderi</b></a> · ZapDL: your downloads, under control.</sub>
+</p>
